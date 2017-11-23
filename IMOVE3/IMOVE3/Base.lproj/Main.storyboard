@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jqc-Xh-Bwc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="npn-tu-rjY">
+            <objects>
+                <viewController id="X8Q-cg-UPT" customClass="MapViewController" customModule="IMOVE3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NEV-cu-nZj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nLp-mm-CQ5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Kfk-38-SQz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="JU5-33-Ydl"/>
+                    <connections>
+                        <outlet property="Map" destination="nLp-mm-CQ5" id="Tug-5o-dt7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vjz-CF-LOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552.79999999999995" y="275.71214392803603"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="VDg-zb-yqe">
+            <objects>
+                <viewController id="Apk-aj-sDd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Icg-un-3Kx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="vDh-DI-cC7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Friends" id="KgJ-aw-dz4"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8JL-Wj-LN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="942"/>
+        </scene>
+        <!--Guide-->
+        <scene sceneID="kh2-M6-4nN">
+            <objects>
+                <viewController id="eif-Ru-UuQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZgT-Ix-GGg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="NNs-Mv-ky5"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Guide" id="0bQ-qm-Fdf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xH-YI-SMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="-390"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sSH-Of-aM2">
+            <objects>
+                <tabBarController id="jqc-Xh-Bwc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MsM-Sn-VY8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eif-Ru-UuQ" kind="relationship" relationship="viewControllers" id="GU8-mR-bFd"/>
+                        <segue destination="X8Q-cg-UPT" kind="relationship" relationship="viewControllers" id="nbH-sc-w5h"/>
+                        <segue destination="Apk-aj-sDd" kind="relationship" relationship="viewControllers" id="a5I-vu-PD0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p8h-K5-RAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-398" y="-58"/>
+        </scene>
+    </scenes>
+</document>
