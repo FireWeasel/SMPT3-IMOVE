@@ -21,17 +21,45 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nLp-mm-CQ5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9U7-hO-R41" appends="YES" id="NJL-Pt-ktL"/>
+                                    <outletCollection property="gestureRecognizers" destination="CNR-c6-g27" appends="YES" id="bdT-NZ-LRi"/>
+                                </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opy-KS-Zht">
+                                <rect key="frame" x="281" y="576" width="85" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Center">
+                                    <color key="titleColor" red="1" green="0.31372549019607843" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CenterOnUser:" destination="X8Q-cg-UPT" eventType="touchUpInside" id="Ee5-j0-dDQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Kfk-38-SQz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="JU5-33-Ydl"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Untitled-4" id="JU5-33-Ydl"/>
                     <connections>
+                        <outlet property="ButtonRecenter" destination="Opy-KS-Zht" id="6ev-hq-n0m"/>
                         <outlet property="Map" destination="nLp-mm-CQ5" id="Tug-5o-dt7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vjz-CF-LOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9U7-hO-R41">
+                    <connections>
+                        <action selector="TapMap:" destination="X8Q-cg-UPT" id="WZi-ck-kem"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="CNR-c6-g27">
+                    <connections>
+                        <action selector="TapMap:" destination="X8Q-cg-UPT" id="XLH-ya-E5N"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="552.79999999999995" y="275.71214392803603"/>
         </scene>
@@ -45,7 +73,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="vDh-DI-cC7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Friends" id="KgJ-aw-dz4"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="Untitled-5" id="KgJ-aw-dz4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8JL-Wj-LN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -62,7 +90,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="NNs-Mv-ky5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Guide" id="0bQ-qm-Fdf"/>
+                    <tabBarItem key="tabBarItem" title="Guide" image="dump" id="0bQ-qm-Fdf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xH-YI-SMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,4 +116,9 @@
             <point key="canvasLocation" x="-398" y="-58"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Untitled-4" width="50" height="50"/>
+        <image name="Untitled-5" width="50" height="50"/>
+        <image name="dump" width="50" height="50"/>
+    </resources>
 </document>

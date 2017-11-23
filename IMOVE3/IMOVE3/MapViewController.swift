@@ -12,21 +12,19 @@ import CoreLocation
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var Map: MKMapView!
-    var locationManager: CLLocationManager!
+    @IBOutlet weak var ButtonRecenter: UIButton!
+    var locationManager = CLLocationManager()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Map.delegate = self as! MKMapViewDelegate
-        Map.showsUserLocation = true
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
+        ButtonRecenter.layer.cornerRadius = 4
+        ButtonRecenter.isHidden = true
         locationManager.delegate = self
-        DispatchQueue.main.async {
-            self.locationManager.startUpdatingLocation()
-        }
+       locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +32,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func TapMap(_ sender: Any) {
+        ButtonRecenter.isHidden = false
+        locationManager.stopUpdatingLocation()
+        
+    }
+    
+    @IBAction func CenterOnUser(_ sender: Any) {
+        locationManager.startUpdatingLocation()
+        ButtonRecenter.isHidden = true;
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -47,12 +56,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     
     //MARK: Actions
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        let location = locations.last as! CLLocation
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
-        region.center = Map.userLocation.coordinate
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        //Set the map span to the users location.
+        let location = locations[0]
+        
+        let span = MKCoordinateSpanMake(0.01, 0.01)
+        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         Map.setRegion(region, animated: true)
+        self.Map.showsUserLocation = true
     }
 
 }
