@@ -11,12 +11,14 @@ import MapKit
 class ChallengeAnnotation: NSObject, MKAnnotation {
     
     var coordinate: CLLocationCoordinate2D
-    //var desc: String!
-    //var name: String!
+    var desc: String!
+    var name: String!
     var image: String!
     
-    init(coordinate: CLLocationCoordinate2D, image: String) {
+    init(coordinate: CLLocationCoordinate2D, image: String, desc:String, name:String) {
         self.coordinate = coordinate
         self.image = image
+        self.desc = desc
+        self.name = name
     }
 }
