@@ -9,14 +9,18 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FirebaseDatabase
 
 class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDelegate {
     @IBOutlet weak var Map: MKMapView!
     @IBOutlet weak var ButtonRecenter: UIButton!
     var locationManager = CLLocationManager()
     var myLocation = CLLocationCoordinate2D()
+    var ref:DatabaseReference!
+    var refHandle:UInt!
     
     var coordinates: [[Double]]!
+    var pointers = [ChallengeAnnotation]()
     var names:[String]!
     var descriptions:[String]!
    
@@ -26,6 +30,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         super.viewDidLoad()
         ButtonFeatures()
         LocationManagerStartUp()
+        ref = Database.database().reference()
         //SetChallenges()
         
         coordinates = [[51.441748,5.483254],[51.445610,5.468737],[51.456007,5.476780]]
@@ -33,18 +38,46 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         descriptions = ["Hey there sporter, Try to do as maney push-ups as you can within 5 minutes. Try to beat your friends!","Hey there sporter, try to cycle this route as fast as you can. Try to set a good time to beat all your friends","Hello sporter, you have arrived at a great climbing structure, Try to set a time climbing from front to back."]
         self.Map.delegate = self
 
-        for i in 0...2
+        /*for i in 0...2
         {
             let coordinate = coordinates[i]
             let point = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude: coordinate[0] , longitude: coordinate[1] ))
-            point.image = UIImage(named: "chal-\(i+1).jpg")
-            point.name = names[i]
-            point.desc = descriptions[i]
+            //point.image = UIImage(named: "chal-\(i+1).jpg")
+            //point.name = names[i]
+            //point.desc = descriptions[i]
             self.Map.addAnnotation(point)
-        }
+        }*/
+        loadPointer()
+    }
+    
+    func loadPointer(){
+        refHandle = ref.child("Locations").observe(.childAdded, with: {(snapshot) in
+            if let dictionary = snapshot.value as? [String:AnyObject] {
+                let lat = dictionary["latitude"] as! Double
+                let long = dictionary["longtitude"] as! Double
+                let location = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude:lat, longitude:long))
+                print(location)
+                self.pointers.append(location)
+                self.Map.addAnnotation(location)
+            }
+        })
         
-       
         
+           // let coordinate = pointers[1]
+           // self.Map.addAnnotation(coordinate)
+ 
+    }
+    
+    func loadAnnotation() {
+        refHandle = ref.child("Locations").observe(.childAdded, with: {(snapshot) in
+            print(snapshot)
+            if let dictionary = snapshot.value as? [String:AnyObject] {
+                let lat = dictionary["latitude"] as! Double
+                let long = dictionary["longtitude"] as! Double
+                let location = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude:lat, longitude:long))
+                self.pointers.append(location)
+            }
+        })
         
     }
 
@@ -148,9 +181,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         let challengeAnnotation = view.annotation as! ChallengeAnnotation
         let views = Bundle.main.loadNibNamed("CustomAnnotationView", owner: nil, options: nil)
         let calloutView = views?[0] as! CustomAnnotationView
-        calloutView.challengeName.text = challengeAnnotation.name
-        calloutView.challengeDescription.text = challengeAnnotation.desc
-        calloutView.challengeImage.image = challengeAnnotation.image
+        //calloutView.challengeName.text = challengeAnnotation.name
+        //calloutView.challengeDescription.text = challengeAnnotation.desc
+        //calloutView.challengeImage.image = challengeAnnotation.image
         //let button = UIButton(frame: calloutView.starbucksPhone.frame)
         //button.addTarget(self, action: #selector(ViewController.callPhoneNumber(sender:)), for: .touchUpInside)
         //calloutView.addSubview(button)

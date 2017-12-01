@@ -11,9 +11,9 @@ import MapKit
 class ChallengeAnnotation: NSObject, MKAnnotation {
     
     var coordinate: CLLocationCoordinate2D
-    var desc: String!
-    var name: String!
-    var image: UIImage!
+    //var desc: String!
+    //var name: String!
+    //var image: UIImage!
     
     init(coordinate: CLLocationCoordinate2D) {
         self.coordinate = coordinate

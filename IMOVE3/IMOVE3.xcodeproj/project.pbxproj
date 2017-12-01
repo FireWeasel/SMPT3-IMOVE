@@ -23,9 +23,9 @@
 		F568A2F01FD1486B0043215C /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A2EF1FD1486B0043215C /* CustomAnnotationView.swift */; };
 		F568A2F81FD151A90043215C /* ChallengeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A2F71FD151A90043215C /* ChallengeAnnotation.swift */; };
 		F568A2FA1FD155C10043215C /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A2F91FD155C10043215C /* AnnotationView.swift */; };
-		F568A3041FD15E110043215C /* chal-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F568A3011FD15E110043215C /* chal-1.jpg */; };
-		F568A3051FD15E110043215C /* chal-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F568A3021FD15E110043215C /* chal-3.jpg */; };
-		F568A3061FD15E110043215C /* chal-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F568A3031FD15E110043215C /* chal-2.jpg */; };
+		F5D799801FD17D47004FDF3A /* chal-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5D7997D1FD17D46004FDF3A /* chal-1.jpg */; };
+		F5D799811FD17D47004FDF3A /* chal-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5D7997E1FD17D47004FDF3A /* chal-2.jpg */; };
+		F5D799821FD17D47004FDF3A /* chal-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5D7997F1FD17D47004FDF3A /* chal-3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,9 +73,9 @@
 		F568A2EF1FD1486B0043215C /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		F568A2F71FD151A90043215C /* ChallengeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeAnnotation.swift; sourceTree = "<group>"; };
 		F568A2F91FD155C10043215C /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
-		F568A3011FD15E110043215C /* chal-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "chal-1.jpg"; path = "../../../chal-1.jpg"; sourceTree = "<group>"; };
-		F568A3021FD15E110043215C /* chal-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "chal-3.jpg"; path = "../../../chal-3.jpg"; sourceTree = "<group>"; };
-		F568A3031FD15E110043215C /* chal-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "chal-2.jpg"; path = "../../../chal-2.jpg"; sourceTree = "<group>"; };
+		F5D7997D1FD17D46004FDF3A /* chal-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chal-1.jpg"; sourceTree = "<group>"; };
+		F5D7997E1FD17D47004FDF3A /* chal-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chal-2.jpg"; sourceTree = "<group>"; };
+		F5D7997F1FD17D47004FDF3A /* chal-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chal-3.jpg"; sourceTree = "<group>"; };
 		F5FE571BD2797D7AC7020727 /* Pods-IMOVE3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMOVE3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMOVE3Tests/Pods-IMOVE3Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,9 +167,9 @@
 				F511CE7D1FC6BA6C004A5A53 /* Info.plist */,
 				F568A2ED1FD1483C0043215C /* CustomAnnotationView.xib */,
 				F568A2EF1FD1486B0043215C /* CustomAnnotationView.swift */,
-				F568A3011FD15E110043215C /* chal-1.jpg */,
-				F568A3031FD15E110043215C /* chal-2.jpg */,
-				F568A3021FD15E110043215C /* chal-3.jpg */,
+				F5D7997D1FD17D46004FDF3A /* chal-1.jpg */,
+				F5D7997E1FD17D47004FDF3A /* chal-2.jpg */,
+				F5D7997F1FD17D47004FDF3A /* chal-3.jpg */,
 			);
 			path = IMOVE3;
 			sourceTree = "<group>";
@@ -308,12 +308,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F568A3061FD15E110043215C /* chal-2.jpg in Resources */,
+				F5D799821FD17D47004FDF3A /* chal-3.jpg in Resources */,
+				F5D799811FD17D47004FDF3A /* chal-2.jpg in Resources */,
+				F5D799801FD17D47004FDF3A /* chal-1.jpg in Resources */,
 				F511CE7C1FC6BA6C004A5A53 /* LaunchScreen.storyboard in Resources */,
-				F568A3051FD15E110043215C /* chal-3.jpg in Resources */,
 				F511CEB81FD0366B004A5A53 /* GoogleService-Info.plist in Resources */,
 				F568A2EE1FD1483C0043215C /* CustomAnnotationView.xib in Resources */,
-				F568A3041FD15E110043215C /* chal-1.jpg in Resources */,
 				F511CE791FC6BA6C004A5A53 /* Assets.xcassets in Resources */,
 				F511CE771FC6BA6C004A5A53 /* Main.storyboard in Resources */,
 			);
@@ -359,11 +359,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IMOVE3/Pods-IMOVE3-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
