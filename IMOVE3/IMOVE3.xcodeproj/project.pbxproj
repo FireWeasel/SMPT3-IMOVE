@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4001FD6C246532C4A82430D4 /* Pods_IMOVE3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6257E03156B20F84AF7EBC6 /* Pods_IMOVE3UITests.framework */; };
+		91C57F4B3BE9F0F533A41CB2 /* Pods_IMOVE3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65C94B0547BE03DB4C87FFC /* Pods_IMOVE3.framework */; };
+		9E29497EAD998478F0A9F992 /* Pods_IMOVE3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37789002B9CF7D2704CBFACE /* Pods_IMOVE3Tests.framework */; };
 		F511CE721FC6BA6C004A5A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511CE711FC6BA6C004A5A53 /* AppDelegate.swift */; };
 		F511CE741FC6BA6C004A5A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511CE731FC6BA6C004A5A53 /* ViewController.swift */; };
 		F511CE771FC6BA6C004A5A53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F511CE751FC6BA6C004A5A53 /* Main.storyboard */; };
@@ -15,6 +18,14 @@
 		F511CE871FC6BA6C004A5A53 /* IMOVE3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511CE861FC6BA6C004A5A53 /* IMOVE3Tests.swift */; };
 		F511CE921FC6BA6C004A5A53 /* IMOVE3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511CE911FC6BA6C004A5A53 /* IMOVE3UITests.swift */; };
 		F511CEA01FC6BC65004A5A53 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511CE9F1FC6BC65004A5A53 /* MapViewController.swift */; };
+		F511CEB81FD0366B004A5A53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F511CEB71FD0366B004A5A53 /* GoogleService-Info.plist */; };
+		F568A2EE1FD1483C0043215C /* CustomAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F568A2ED1FD1483C0043215C /* CustomAnnotationView.xib */; };
+		F568A2F01FD1486B0043215C /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A2EF1FD1486B0043215C /* CustomAnnotationView.swift */; };
+		F568A2F81FD151A90043215C /* ChallengeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A2F71FD151A90043215C /* ChallengeAnnotation.swift */; };
+		F568A2FA1FD155C10043215C /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A2F91FD155C10043215C /* AnnotationView.swift */; };
+		F568A3041FD15E110043215C /* chal-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F568A3011FD15E110043215C /* chal-1.jpg */; };
+		F568A3051FD15E110043215C /* chal-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F568A3021FD15E110043215C /* chal-3.jpg */; };
+		F568A3061FD15E110043215C /* chal-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F568A3031FD15E110043215C /* chal-2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EC4D08EE44D08E7F8E7F457 /* Pods-IMOVE3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMOVE3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMOVE3UITests/Pods-IMOVE3UITests.release.xcconfig"; sourceTree = "<group>"; };
+		29385796E6D58551FC9D969E /* Pods-IMOVE3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMOVE3UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMOVE3UITests/Pods-IMOVE3UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		37789002B9CF7D2704CBFACE /* Pods_IMOVE3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMOVE3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		935F853C643FFA529FFAAE10 /* Pods-IMOVE3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMOVE3.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMOVE3/Pods-IMOVE3.release.xcconfig"; sourceTree = "<group>"; };
+		B2B5D17B4B3A126702C83239 /* Pods-IMOVE3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMOVE3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMOVE3/Pods-IMOVE3.debug.xcconfig"; sourceTree = "<group>"; };
+		B6257E03156B20F84AF7EBC6 /* Pods_IMOVE3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMOVE3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C65C94B0547BE03DB4C87FFC /* Pods_IMOVE3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMOVE3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C80F3D9A3B3E6F7F1C21F281 /* Pods-IMOVE3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMOVE3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMOVE3Tests/Pods-IMOVE3Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F511CE6E1FC6BA6C004A5A53 /* IMOVE3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMOVE3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F511CE711FC6BA6C004A5A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F511CE731FC6BA6C004A5A53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +68,15 @@
 		F511CE911FC6BA6C004A5A53 /* IMOVE3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMOVE3UITests.swift; sourceTree = "<group>"; };
 		F511CE931FC6BA6C004A5A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F511CE9F1FC6BC65004A5A53 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F511CEB71FD0366B004A5A53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F568A2ED1FD1483C0043215C /* CustomAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAnnotationView.xib; sourceTree = "<group>"; };
+		F568A2EF1FD1486B0043215C /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		F568A2F71FD151A90043215C /* ChallengeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeAnnotation.swift; sourceTree = "<group>"; };
+		F568A2F91FD155C10043215C /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		F568A3011FD15E110043215C /* chal-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "chal-1.jpg"; path = "../../../chal-1.jpg"; sourceTree = "<group>"; };
+		F568A3021FD15E110043215C /* chal-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "chal-3.jpg"; path = "../../../chal-3.jpg"; sourceTree = "<group>"; };
+		F568A3031FD15E110043215C /* chal-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "chal-2.jpg"; path = "../../../chal-2.jpg"; sourceTree = "<group>"; };
+		F5FE571BD2797D7AC7020727 /* Pods-IMOVE3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMOVE3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMOVE3Tests/Pods-IMOVE3Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C57F4B3BE9F0F533A41CB2 /* Pods_IMOVE3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E29497EAD998478F0A9F992 /* Pods_IMOVE3Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +100,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4001FD6C246532C4A82430D4 /* Pods_IMOVE3UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8481F681D751E984E3E82036 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C65C94B0547BE03DB4C87FFC /* Pods_IMOVE3.framework */,
+				37789002B9CF7D2704CBFACE /* Pods_IMOVE3Tests.framework */,
+				B6257E03156B20F84AF7EBC6 /* Pods_IMOVE3UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7156033DED56FEE223A94AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2B5D17B4B3A126702C83239 /* Pods-IMOVE3.debug.xcconfig */,
+				935F853C643FFA529FFAAE10 /* Pods-IMOVE3.release.xcconfig */,
+				C80F3D9A3B3E6F7F1C21F281 /* Pods-IMOVE3Tests.debug.xcconfig */,
+				F5FE571BD2797D7AC7020727 /* Pods-IMOVE3Tests.release.xcconfig */,
+				29385796E6D58551FC9D969E /* Pods-IMOVE3UITests.debug.xcconfig */,
+				0EC4D08EE44D08E7F8E7F457 /* Pods-IMOVE3UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F511CE651FC6BA6C004A5A53 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +137,8 @@
 				F511CE851FC6BA6C004A5A53 /* IMOVE3Tests */,
 				F511CE901FC6BA6C004A5A53 /* IMOVE3UITests */,
 				F511CE6F1FC6BA6C004A5A53 /* Products */,
+				C7156033DED56FEE223A94AF /* Pods */,
+				8481F681D751E984E3E82036 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +159,17 @@
 				F511CE731FC6BA6C004A5A53 /* ViewController.swift */,
 				F511CE751FC6BA6C004A5A53 /* Main.storyboard */,
 				F511CE9F1FC6BC65004A5A53 /* MapViewController.swift */,
+				F568A2F91FD155C10043215C /* AnnotationView.swift */,
+				F568A2F71FD151A90043215C /* ChallengeAnnotation.swift */,
 				F511CE781FC6BA6C004A5A53 /* Assets.xcassets */,
 				F511CE7A1FC6BA6C004A5A53 /* LaunchScreen.storyboard */,
+				F511CEB71FD0366B004A5A53 /* GoogleService-Info.plist */,
 				F511CE7D1FC6BA6C004A5A53 /* Info.plist */,
+				F568A2ED1FD1483C0043215C /* CustomAnnotationView.xib */,
+				F568A2EF1FD1486B0043215C /* CustomAnnotationView.swift */,
+				F568A3011FD15E110043215C /* chal-1.jpg */,
+				F568A3031FD15E110043215C /* chal-2.jpg */,
+				F568A3021FD15E110043215C /* chal-3.jpg */,
 			);
 			path = IMOVE3;
 			sourceTree = "<group>";
@@ -135,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F511CE961FC6BA6C004A5A53 /* Build configuration list for PBXNativeTarget "IMOVE3" */;
 			buildPhases = (
+				C13E2AA9E002E03ADB3060F3 /* [CP] Check Pods Manifest.lock */,
 				F511CE6A1FC6BA6C004A5A53 /* Sources */,
 				F511CE6B1FC6BA6C004A5A53 /* Frameworks */,
 				F511CE6C1FC6BA6C004A5A53 /* Resources */,
+				08E6353D974E51EBD1CFB568 /* [CP] Embed Pods Frameworks */,
+				5723674E34CA31C9BF994619 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F511CE991FC6BA6C004A5A53 /* Build configuration list for PBXNativeTarget "IMOVE3Tests" */;
 			buildPhases = (
+				EF869567D79AB7AD011E8CE0 /* [CP] Check Pods Manifest.lock */,
 				F511CE7E1FC6BA6C004A5A53 /* Sources */,
 				F511CE7F1FC6BA6C004A5A53 /* Frameworks */,
 				F511CE801FC6BA6C004A5A53 /* Resources */,
+				B605EC7B403DF359CFB17737 /* [CP] Embed Pods Frameworks */,
+				CFADAE1E642C856AADFDC9C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F511CE9C1FC6BA6C004A5A53 /* Build configuration list for PBXNativeTarget "IMOVE3UITests" */;
 			buildPhases = (
+				B2CFE5185D0CF302AA8D4861 /* [CP] Check Pods Manifest.lock */,
 				F511CE891FC6BA6C004A5A53 /* Sources */,
 				F511CE8A1FC6BA6C004A5A53 /* Frameworks */,
 				F511CE8B1FC6BA6C004A5A53 /* Resources */,
+				ED7F4860877FE69A663A38AB /* [CP] Embed Pods Frameworks */,
+				08A2F759538463BCCF3828F3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,7 +308,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F568A3061FD15E110043215C /* chal-2.jpg in Resources */,
 				F511CE7C1FC6BA6C004A5A53 /* LaunchScreen.storyboard in Resources */,
+				F568A3051FD15E110043215C /* chal-3.jpg in Resources */,
+				F511CEB81FD0366B004A5A53 /* GoogleService-Info.plist in Resources */,
+				F568A2EE1FD1483C0043215C /* CustomAnnotationView.xib in Resources */,
+				F568A3041FD15E110043215C /* chal-1.jpg in Resources */,
 				F511CE791FC6BA6C004A5A53 /* Assets.xcassets in Resources */,
 				F511CE771FC6BA6C004A5A53 /* Main.storyboard in Resources */,
 			);
@@ -257,14 +335,169 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08A2F759538463BCCF3828F3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMOVE3UITests/Pods-IMOVE3UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		08E6353D974E51EBD1CFB568 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IMOVE3/Pods-IMOVE3-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMOVE3/Pods-IMOVE3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5723674E34CA31C9BF994619 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMOVE3/Pods-IMOVE3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2CFE5185D0CF302AA8D4861 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMOVE3UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B605EC7B403DF359CFB17737 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMOVE3Tests/Pods-IMOVE3Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C13E2AA9E002E03ADB3060F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMOVE3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFADAE1E642C856AADFDC9C6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMOVE3Tests/Pods-IMOVE3Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED7F4860877FE69A663A38AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMOVE3UITests/Pods-IMOVE3UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF869567D79AB7AD011E8CE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMOVE3Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F511CE6A1FC6BA6C004A5A53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F511CE741FC6BA6C004A5A53 /* ViewController.swift in Sources */,
+				F568A2FA1FD155C10043215C /* AnnotationView.swift in Sources */,
 				F511CEA01FC6BC65004A5A53 /* MapViewController.swift in Sources */,
+				F568A2F01FD1486B0043215C /* CustomAnnotationView.swift in Sources */,
 				F511CE721FC6BA6C004A5A53 /* AppDelegate.swift in Sources */,
+				F568A2F81FD151A90043215C /* ChallengeAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +661,7 @@
 		};
 		F511CE971FC6BA6C004A5A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2B5D17B4B3A126702C83239 /* Pods-IMOVE3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -444,6 +678,7 @@
 		};
 		F511CE981FC6BA6C004A5A53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 935F853C643FFA529FFAAE10 /* Pods-IMOVE3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,6 +695,7 @@
 		};
 		F511CE9A1FC6BA6C004A5A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C80F3D9A3B3E6F7F1C21F281 /* Pods-IMOVE3Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -476,6 +712,7 @@
 		};
 		F511CE9B1FC6BA6C004A5A53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5FE571BD2797D7AC7020727 /* Pods-IMOVE3Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +729,7 @@
 		};
 		F511CE9D1FC6BA6C004A5A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29385796E6D58551FC9D969E /* Pods-IMOVE3UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -507,6 +745,7 @@
 		};
 		F511CE9E1FC6BA6C004A5A53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EC4D08EE44D08E7F8E7F457 /* Pods-IMOVE3UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

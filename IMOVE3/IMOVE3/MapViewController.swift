@@ -10,58 +10,42 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDelegate {
     @IBOutlet weak var Map: MKMapView!
     @IBOutlet weak var ButtonRecenter: UIButton!
     var locationManager = CLLocationManager()
     var myLocation = CLLocationCoordinate2D()
     
+    var coordinates: [[Double]]!
+    var names:[String]!
+    var descriptions:[String]!
+   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ButtonFeatures()
-        
         LocationManagerStartUp()
         //SetChallenges()
         
-        
-        
-        let challengeLocation = CLLocationCoordinate2D(latitude: 51.44950853626378, longitude: 5.479984190315008)
-        let runChallenge1 = MKPointAnnotation()
-        runChallenge1.coordinate = challengeLocation
-        runChallenge1.title = "Running Challenge"
-        runChallenge1.subtitle = "Run 4km"
-        Map.addAnnotation(runChallenge1)
-        let run1Placemark = MKPlacemark(coordinate: challengeLocation, addressDictionary: nil)
-        let run1MapItem = MKMapItem(placemark: run1Placemark)
-        
-        let locationPlacemark = MKPlacemark(coordinate: myLocation, addressDictionary: nil)
-        let locationMapItem = MKMapItem(placemark: locationPlacemark)
-        
-        
-        let directionRequest = MKDirectionsRequest()
-        directionRequest.source = locationMapItem
-        directionRequest.destination = run1MapItem
-        directionRequest.transportType = .walking
-        
-        let directions = MKDirections(request: directionRequest)
-        directions.calculate {
-            (response, error) -> Void in
-            
-            guard let response = response else {
-                if let error = error {
-                    print("Error: \(error)")
-                }
-                
-                return
-            }
-            
-            let route = response.routes[0]
-            self.Map.add((route.polyline), level: MKOverlayLevel.aboveRoads)
-            
-            let rect = route.polyline.boundingMapRect
-            self.Map.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
+        coordinates = [[51.441748,5.483254],[51.445610,5.468737],[51.456007,5.476780]]
+        names = ["Push-Up Challenge","Cycling Challenge","Climbing Challenge"]
+        descriptions = ["Hey there sporter, Try to do as maney push-ups as you can within 5 minutes. Try to beat your friends!","Hey there sporter, try to cycle this route as fast as you can. Try to set a good time to beat all your friends","Hello sporter, you have arrived at a great climbing structure, Try to set a time climbing from front to back."]
+        self.Map.delegate = self
+
+        for i in 0...2
+        {
+            let coordinate = coordinates[i]
+            let point = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude: coordinate[0] , longitude: coordinate[1] ))
+            point.image = UIImage(named: "chal-\(i+1).jpg")
+            point.name = names[i]
+            point.desc = descriptions[i]
+            self.Map.addAnnotation(point)
         }
+        
+       
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,6 +87,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         Map.setRegion(region, animated: true)
         self.Map.showsUserLocation = true
+    
     }
     
     func ButtonFeatures()
@@ -119,6 +104,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
+    /*
     func SetChallenges()
     {
         let challengeLocation = CLLocationCoordinate2D(latitude: 51.44950853626378, longitude: 5.479984190315008)
@@ -127,7 +113,61 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         runChallenge1.title = "Running Challenge"
         runChallenge1.subtitle = "Run 4km"
         Map.addAnnotation(runChallenge1)
-    }
+    }*/
+    
     
 
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation
+        {
+            return nil
+        }
+        var annotationView = self.Map.dequeueReusableAnnotationView(withIdentifier: "Pin")
+        if annotationView == nil{
+            annotationView = AnnotationView(annotation: annotation, reuseIdentifier: "Pin")
+            annotationView?.canShowCallout = false
+        }else{
+            annotationView?.annotation = annotation
+        }
+        annotationView?.image = UIImage(named: "chal")
+        return annotationView
+    }
+
+    
+   
+    func mapView(_ mapView: MKMapView,
+                 didSelect view: MKAnnotationView)
+    {
+        // 1
+        if view.annotation is MKUserLocation
+        {
+            // Don't proceed with custom callout
+            return
+        }
+        // 2
+        let challengeAnnotation = view.annotation as! ChallengeAnnotation
+        let views = Bundle.main.loadNibNamed("CustomAnnotationView", owner: nil, options: nil)
+        let calloutView = views?[0] as! CustomAnnotationView
+        calloutView.challengeName.text = challengeAnnotation.name
+        calloutView.challengeDescription.text = challengeAnnotation.desc
+        calloutView.challengeImage.image = challengeAnnotation.image
+        //let button = UIButton(frame: calloutView.starbucksPhone.frame)
+        //button.addTarget(self, action: #selector(ViewController.callPhoneNumber(sender:)), for: .touchUpInside)
+        //calloutView.addSubview(button)
+        // 3
+        calloutView.center = CGPoint(x: view.bounds.size.width / 2, y: -calloutView.bounds.size.height*0.52)
+        view.addSubview(calloutView)
+       // mapView.setCenter((view.annotation?.coordinate)!, animated: true)
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        if view.isKind(of: AnnotationView.self)
+        {
+            for subview in view.subviews
+            {
+                subview.removeFromSuperview()
+            }
+        }
+    }
 }
