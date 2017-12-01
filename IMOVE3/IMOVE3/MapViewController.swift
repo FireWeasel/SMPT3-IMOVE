@@ -14,6 +14,7 @@ import FirebaseDatabase
 class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDelegate {
     @IBOutlet weak var Map: MKMapView!
     @IBOutlet weak var ButtonRecenter: UIButton!
+    @IBOutlet weak var ProfileButton: UIButton!
     var locationManager = CLLocationManager()
     var myLocation = CLLocationCoordinate2D()
     var ref:DatabaseReference!
@@ -38,15 +39,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         descriptions = ["Hey there sporter, Try to do as maney push-ups as you can within 5 minutes. Try to beat your friends!","Hey there sporter, try to cycle this route as fast as you can. Try to set a good time to beat all your friends","Hello sporter, you have arrived at a great climbing structure, Try to set a time climbing from front to back."]
         self.Map.delegate = self
 
-        /*for i in 0...2
-        {
-            let coordinate = coordinates[i]
-            let point = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude: coordinate[0] , longitude: coordinate[1] ))
-            //point.image = UIImage(named: "chal-\(i+1).jpg")
-            //point.name = names[i]
-            //point.desc = descriptions[i]
-            self.Map.addAnnotation(point)
-        }*/
+        self.ProfileButton.layer.cornerRadius = self.ProfileButton.frame.size.width / 2;
+        self.ProfileButton.clipsToBounds = true;
         loadPointer()
     }
     
