@@ -13,9 +13,10 @@ class ChallengeAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     //var desc: String!
     //var name: String!
-    //var image: UIImage!
+    var image: String!
     
-    init(coordinate: CLLocationCoordinate2D) {
+    init(coordinate: CLLocationCoordinate2D, image: String) {
         self.coordinate = coordinate
+        self.image = image
     }
 }

@@ -55,7 +55,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             if let dictionary = snapshot.value as? [String:AnyObject] {
                 let lat = dictionary["latitude"] as! Double
                 let long = dictionary["longtitude"] as! Double
-                let location = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude:lat, longitude:long))
+                let image = dictionary["image"] as! String
+                let location = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude:lat, longitude:long), image: image)
                 print(location)
                 self.pointers.append(location)
                 self.Map.addAnnotation(location)
@@ -68,18 +69,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
  
     }
     
-    func loadAnnotation() {
-        refHandle = ref.child("Locations").observe(.childAdded, with: {(snapshot) in
-            print(snapshot)
-            if let dictionary = snapshot.value as? [String:AnyObject] {
-                let lat = dictionary["latitude"] as! Double
-                let long = dictionary["longtitude"] as! Double
-                let location = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude:lat, longitude:long))
-                self.pointers.append(location)
-            }
-        })
-        
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -177,13 +166,29 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             // Don't proceed with custom callout
             return
         }
-        // 2
+        //2
         let challengeAnnotation = view.annotation as! ChallengeAnnotation
         let views = Bundle.main.loadNibNamed("CustomAnnotationView", owner: nil, options: nil)
         let calloutView = views?[0] as! CustomAnnotationView
         //calloutView.challengeName.text = challengeAnnotation.name
         //calloutView.challengeDescription.text = challengeAnnotation.desc
-        //calloutView.challengeImage.image = challengeAnnotation.image
+        // downloading image from storage
+        var image:UIImage!
+        if let imageURL = challengeAnnotation.image {
+            let url = URL(string: imageURL)
+            URLSession.shared.dataTask(with: url!, completionHandler: { (data,response ,error ) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                DispatchQueue.main.async {
+                    image = UIImage(data:data!)
+                    calloutView.challengeImage.image = image
+                    print(data)
+                }
+            }).resume()
+        }
+        // 2
         //let button = UIButton(frame: calloutView.starbucksPhone.frame)
         //button.addTarget(self, action: #selector(ViewController.callPhoneNumber(sender:)), for: .touchUpInside)
         //calloutView.addSubview(button)
