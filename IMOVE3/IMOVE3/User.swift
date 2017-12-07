@@ -9,22 +9,17 @@
 import Foundation
 import UIKit
 
-class User {
+class User:NSObject {
     var name:String!
-    var password:String
-    var userID:Int!
     var totalScore:Int!
     var level:Int!
-    var profileImage:String
-    var loggedIn:Bool
+    var profileImage:String?
     
-    init(name: String, userID: Int, profileImage: String, password: String, loggedIn:Bool ) {
+    
+    init(name: String, profileImage: String, totalScore: Int, level: Int ) {
         self.name = name
-        self.userID = userID
         self.profileImage = profileImage
-        self.password = password
-        self.level = 1
-        self.totalScore = 0
-        self.loggedIn = loggedIn
+        self.level = level
+        self.totalScore = totalScore
     }
 }
