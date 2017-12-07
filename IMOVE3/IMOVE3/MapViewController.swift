@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 import FirebaseDatabase
+import FirebaseAuth
 
 class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDelegate {
     @IBOutlet weak var Map: MKMapView!
@@ -33,6 +34,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         ButtonFeatures()
         LocationManagerStartUp()
         ref = Database.database().reference()
+        LoadProfile()
         //SetChallenges()
         
         coordinates = [[51.441748,5.483254],[51.445610,5.468737],[51.456007,5.476780]]
@@ -84,16 +86,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         ButtonRecenter.isHidden = true;
     }
     
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     
     //MARK: Actions
@@ -123,18 +116,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
     }
-    
-    /*
-    func SetChallenges()
-    {
-        let challengeLocation = CLLocationCoordinate2D(latitude: 51.44950853626378, longitude: 5.479984190315008)
-        let runChallenge1 = MKPointAnnotation()
-        runChallenge1.coordinate = challengeLocation
-        runChallenge1.title = "Running Challenge"
-        runChallenge1.subtitle = "Run 4km"
-        Map.addAnnotation(runChallenge1)
-    }*/
-    
     
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -204,6 +185,41 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             for subview in view.subviews
             {
                 subview.removeFromSuperview()
+            }
+        }
+    }
+    
+    func LoadProfile()
+    {
+        let uid = (Auth.auth().currentUser?.uid)!
+        ref.child("Users").child(uid).observeSingleEvent(of: .value) { (snapshot) in
+            if let dictionary = snapshot.value as? [String:AnyObject]{
+                let name = dictionary["name"] as! String
+                let level = dictionary["level"] as! Int
+                let totalScore = dictionary["totalScore"] as! Int
+                let profileImage = dictionary["profileImage"] as? String
+                
+                var user = User(name: name, profileImage: profileImage!, totalScore: totalScore, level: level)
+                
+                var image:UIImage!
+                if let imageURL = user.profileImage {
+                    let url = URL(string: imageURL)
+                    URLSession.shared.dataTask(with: url!, completionHandler: { (data,response ,error ) in
+                        if error != nil {
+                            print(error!)
+                            return
+                        }
+                        DispatchQueue.main.async {
+                            image = UIImage(data:data!)
+                            
+                            self.ProfileButton.setImage(image, for: UIControlState.normal)
+                            //image = image
+                            self.ProfileLevelLabel.text = String(user.level)
+                            
+                            
+                        }
+                    }).resume()
+                }
             }
         }
     }

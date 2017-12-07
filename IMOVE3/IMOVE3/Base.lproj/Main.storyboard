@@ -844,7 +844,8 @@
         <image name="ilS1ri2v" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="BCq-oh-CgO"/>
         <segue reference="6pd-b4-htx"/>
-        <segue reference="6NU-zJ-od5"/>
+        <segue reference="kzJ-e5-b9c"/>
     </inferredMetricsTieBreakers>
 </document>
