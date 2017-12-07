@@ -475,7 +475,7 @@
         <!--View Controller-->
         <scene sceneID="rdF-6k-5Ru">
             <objects>
-                <viewController id="wRO-xg-uph" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Challenge" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wRO-xg-uph" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rVg-mq-qeF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -698,7 +698,7 @@
         <image name="ilS1ri2v" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6pd-b4-htx"/>
+        <segue reference="V8g-qz-G2W"/>
         <segue reference="6NU-zJ-od5"/>
     </inferredMetricsTieBreakers>
 </document>
