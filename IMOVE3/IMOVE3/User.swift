@@ -15,14 +15,16 @@ class User {
     var userID:Int!
     var totalScore:Int!
     var level:Int!
-    var profileImage:UIImage
+    var profileImage:String
+    var loggedIn:Bool
     
-    init(name: String, userID: Int, profileImage: UIImage, password: String ) {
+    init(name: String, userID: Int, profileImage: String, password: String, loggedIn:Bool ) {
         self.name = name
         self.userID = userID
         self.profileImage = profileImage
         self.password = password
         self.level = 1
         self.totalScore = 0
+        self.loggedIn = loggedIn
     }
 }

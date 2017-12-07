@@ -9,6 +9,7 @@ target 'IMOVE3' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage’
 
   target 'IMOVE3Tests' do
     inherit! :search_paths
