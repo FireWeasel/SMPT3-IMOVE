@@ -15,6 +15,7 @@ class CustomAnnotationView: UIView {
     @IBOutlet weak var navigateButton: UIButton!
     
     @IBAction func ClickStart(_ sender: Any) {
+      
     }
     /*
     // Only override draw() if you perform custom drawing.

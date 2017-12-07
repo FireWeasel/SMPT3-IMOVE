@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var LevelLabel: UILabel!
     @IBOutlet weak var PointsLabel: UILabel!
     @IBOutlet weak var UserNameLabel: UILabel!
-    var user = User(name: "John Peters", userID: 001, profileImage: UIImage(named: "ilS1ri2v")!)
+    var user = User(name: "John Peters", userID: 001, profileImage: UIImage(named: "ilS1ri2v")!, password: "1234")
     
     override func viewDidLoad() {
         super.viewDidLoad()
