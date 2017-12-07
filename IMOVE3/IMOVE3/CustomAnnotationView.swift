@@ -18,7 +18,7 @@ class CustomAnnotationView: UIView {
     
     @IBAction func ClickStart(_ sender: Any) {
         
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Challenge") as! UITabBarController
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Challenge")
        
     UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
 

@@ -8,11 +8,11 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     var ref:DatabaseReference!
     var refHandler:UInt!
-    var user: User!
     
     @IBOutlet weak var passTb: UITextField!
     @IBOutlet weak var nameTb: UITextField!
@@ -29,17 +29,26 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func logIn(_ sender: Any) {
-        let refHandle = ref.database.reference().child("Users").child(nameTb.text!)
         
-        refHandle.updateChildValues(["loggedIn":true])
+        let email = nameTb.text! + "@email.com"
+        let password = passTb.text
         
-        refHandler = ref.child("Users").observe(.childChanged, with: { (snapshot) in
+        Auth.auth().signIn(withEmail: email, password: password!) { (user, error) in
             
-            if let dictionary = snapshot.value as? [String:AnyObject] {
-                let name = dictionary["name"]
+            if error == nil {
+                
+                print("You have successfully logged in")
+                
+            } else {
+                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                self.present(alertController, animated: true, completion: nil)
             }
-            
-        })
+        }
+        
         
     }
     
