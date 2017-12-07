@@ -19,6 +19,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
     var myLocation = CLLocationCoordinate2D()
     var ref:DatabaseReference!
     var refHandle:UInt!
+    @IBOutlet weak var ProfileLevelLabel: UILabel!
     
     var coordinates: [[Double]]!
     var pointers = [ChallengeAnnotation]()
