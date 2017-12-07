@@ -581,10 +581,10 @@
             </objects>
             <point key="canvasLocation" x="4417" y="688"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="sSH-Of-aM2">
             <objects>
-                <tabBarController id="jqc-Xh-Bwc" sceneMemberID="viewController">
+                <tabBarController id="jqc-Xh-Bwc" customClass="TabBarViewController" customModule="IMOVE3" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MsM-Sn-VY8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -693,7 +693,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="2vg-KV-88Z"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aLO-1l-fpt" appends="YES" id="1Oi-G2-GlE"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="nameTb" destination="MXG-uc-LeN" id="ON4-OA-jcE"/>
@@ -701,6 +705,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hhc-xn-WBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aLO-1l-fpt">
+                    <connections>
+                        <action selector="HideKeyboard:" destination="Olp-dU-Xs4" id="N5J-my-ilR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-583.20000000000005" y="-2418.440779610195"/>
         </scene>
@@ -780,7 +789,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="c7J-4e-M5j"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4dZ-zJ-0oZ" appends="YES" id="cA0-Td-GBK"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="Uqi-FT-nuS" id="V2m-sl-Hwr"/>
@@ -792,6 +805,11 @@
                 <tapGestureRecognizer id="hzn-HE-psf">
                     <connections>
                         <action selector="SetImage:" destination="a2i-ka-yBE" id="GGJ-4g-bvi"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="4dZ-zJ-0oZ">
+                    <connections>
+                        <action selector="HideKeyboard:" destination="a2i-ka-yBE" id="lc9-1q-M7m"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -826,7 +844,7 @@
         <image name="ilS1ri2v" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="V8g-qz-G2W"/>
-        <segue reference="L7n-i6-yjq"/>
+        <segue reference="6pd-b4-htx"/>
+        <segue reference="6NU-zJ-od5"/>
     </inferredMetricsTieBreakers>
 </document>

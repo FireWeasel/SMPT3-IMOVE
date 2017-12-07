@@ -27,6 +27,9 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func HideKeyboard(_ sender: Any) {
+        view.endEditing(true)
+    }
     
     @IBAction func logIn(_ sender: Any) {
         

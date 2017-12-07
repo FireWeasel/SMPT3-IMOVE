@@ -33,7 +33,11 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: Actions
+     //MARK: Actions
+    @IBAction func HideKeyboard(_ sender: Any) {
+        view.endEditing(true)
+    }
+   
     @IBAction func Register(_ sender: Any) {
         var name = nameTextField.text
         var password = passwordTextField.text
