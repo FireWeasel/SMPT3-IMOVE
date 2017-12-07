@@ -13,6 +13,11 @@ class CustomAnnotationView: UIView {
     @IBOutlet weak var challengeName: UILabel!
     @IBOutlet weak var challengeDescription: UILabel!
     @IBOutlet weak var navigateButton: UIButton!
+    @IBOutlet weak var toughnessLabel: UILabel!
+    
+    
+    
+    
     
     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
     

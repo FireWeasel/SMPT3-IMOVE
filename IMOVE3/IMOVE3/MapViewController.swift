@@ -51,9 +51,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
                 let lat = dictionary["latitude"] as! Double
                 let long = dictionary["longtitude"] as! Double
                 let image = dictionary["image"] as! String
-                var desc = dictionary["desc"] as! String
-                var name = dictionary["name"] as! String
-                let location = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude:lat, longitude:long), image: image, desc:desc, name:name)
+                let desc = dictionary["desc"] as! String
+                let name = dictionary["name"] as! String
+                let rating = dictionary["rating"] as! Int
+                let location = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude:lat, longitude:long), image: image, desc:desc, name:name, rating:String(rating))
                 print(location)
                 self.pointers.append(location)
                 self.Map.addAnnotation(location)
@@ -169,6 +170,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         let calloutView = views?[0] as! CustomAnnotationView
         calloutView.challengeName.text = challengeAnnotation.name
         calloutView.challengeDescription.text = challengeAnnotation.desc
+        calloutView.toughnessLabel.text = challengeAnnotation.rating
         // downloading image from storage
         var image:UIImage!
         if let imageURL = challengeAnnotation.image {
