@@ -18,9 +18,27 @@ class CustomAnnotationView: UIView {
     
     @IBAction func ClickStart(_ sender: Any) {
         
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Challenge")
-       
-    UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
+        
+        if(challengeName.text == "Push-up challenge")
+        {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "pushup")
+            UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
+        }
+        else if(challengeName.text == "Sit-up challenge")
+        {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "situp")
+            UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
+        }
+        else if(challengeName.text == "Cycling challenge")
+        {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "cycle")
+            UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
+        }
+        else if(challengeName.text == "Group challenge")
+        {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "group")
+            UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
+        }
 
     }
     /*
