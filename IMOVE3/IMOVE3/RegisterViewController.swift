@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseStorage
+import FirebaseAuth
 
 class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -42,35 +43,60 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         var logedIn = false;
         
         
-        let refImage = Storage.storage().reference().child("Users").child("\(name!).jpg")
-        if let uploadData = UIImagePNGRepresentation(img!)
-        {
-            refImage.putData( uploadData , metadata: nil, completion: { (metadata, error) in
-                if error != nil
-                {
-                    print(error)
-                    return
+        if nameTextField.text == "" || passwordTextField.text == ""{
+            let alert = UIAlertController(title: "Error", message: "Please enter a name and password", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(defaultAction)
+            
+            present(alert, animated: true, completion: nil)
+            
+        } else {
+            let nameEmail = nameTextField.text! + "@email.com";
+            Auth.auth().createUser(withEmail: nameEmail, password: passwordTextField.text!) { (user, error) in
+                
+                if error == nil {
+                    
+                    print("You have successfully registered")
+                    
+                    let uid = (Auth.auth().currentUser?.uid)!
+                    
+                    let refImage = Storage.storage().reference().child("Users").child("\(name!).jpg")
+                    if let uploadData = UIImagePNGRepresentation(img!)
+                    {
+                        refImage.putData( uploadData , metadata: nil, completion: { (metadata, error) in
+                            if error != nil
+                            {
+                                print(error)
+                                return
+                            }
+                            if let productImageURL = metadata?.downloadURL()?.absoluteString {
+                                let value = [
+                                    "name" : name,
+                                    "level" : level,
+                                    "profileImage" : productImageURL,
+                                    "totalScore" : totalScore,
+                                    ] as [String : Any]
+                                self.ref.child("Users").child(uid).setValue(value)
+                            }
+                        })
+                    }
+                    
+                    
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
                 }
-                if let productImageURL = metadata?.downloadURL()?.absoluteString {
-                    let value = [
-                        "name" : name,
-                        "password" : password,
-                        "level" : level,
-                        "profileImage" : productImageURL,
-                        "totalScore" : totalScore,
-                        "loggedIn" : logedIn
-                        ] as [String : Any]
-                    self.saveProductIntoDatabase(name: name!, value: value)
-                }
-            })
+            }
         }
-        nameTextField.text = ""
         
-    }
-    
-    private func saveProductIntoDatabase(name:String,value:[String:Any])
-    {
-        self.ref.child("Users").child(name).setValue(value)
+        nameTextField.text = ""
+        passwordTextField.text = ""
+        profileImage.image = #imageLiteral(resourceName: "defaultPhoto")
     }
     
     
