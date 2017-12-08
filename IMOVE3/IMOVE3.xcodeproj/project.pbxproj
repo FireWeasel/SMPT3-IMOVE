@@ -28,6 +28,7 @@
 		F568A3341FD2BF1F0043215C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A3331FD2BF1F0043215C /* User.swift */; };
 		F568A3361FD932A50043215C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A3351FD932A50043215C /* RegisterViewController.swift */; };
 		F568A3381FD96FC30043215C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A3371FD96FC30043215C /* TabBarViewController.swift */; };
+		F5C4BDC51FDA96B600BC64BE /* PushUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4BDC41FDA96B600BC64BE /* PushUpViewController.swift */; };
 		F5D799801FD17D47004FDF3A /* chal-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5D7997D1FD17D46004FDF3A /* chal-1.jpg */; };
 		F5D799811FD17D47004FDF3A /* chal-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5D7997E1FD17D47004FDF3A /* chal-2.jpg */; };
 		F5D799821FD17D47004FDF3A /* chal-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5D7997F1FD17D47004FDF3A /* chal-3.jpg */; };
@@ -83,6 +84,7 @@
 		F568A3331FD2BF1F0043215C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F568A3351FD932A50043215C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F568A3371FD96FC30043215C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F5C4BDC41FDA96B600BC64BE /* PushUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpViewController.swift; sourceTree = "<group>"; };
 		F5D7997D1FD17D46004FDF3A /* chal-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chal-1.jpg"; sourceTree = "<group>"; };
 		F5D7997E1FD17D47004FDF3A /* chal-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chal-2.jpg"; sourceTree = "<group>"; };
 		F5D7997F1FD17D47004FDF3A /* chal-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chal-3.jpg"; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				F5D7997D1FD17D46004FDF3A /* chal-1.jpg */,
 				F5D7997E1FD17D47004FDF3A /* chal-2.jpg */,
 				F5D7997F1FD17D47004FDF3A /* chal-3.jpg */,
+				F5C4BDC41FDA96B600BC64BE /* PushUpViewController.swift */,
 			);
 			path = IMOVE3;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				F568A3381FD96FC30043215C /* TabBarViewController.swift in Sources */,
 				F568A2FA1FD155C10043215C /* AnnotationView.swift in Sources */,
 				F511CEA01FC6BC65004A5A53 /* MapViewController.swift in Sources */,
+				F5C4BDC51FDA96B600BC64BE /* PushUpViewController.swift in Sources */,
 				F568A2F01FD1486B0043215C /* CustomAnnotationView.swift in Sources */,
 				F568A3321FD2BEBF0043215C /* ProfileViewController.swift in Sources */,
 				F568A3341FD2BF1F0043215C /* User.swift in Sources */,
