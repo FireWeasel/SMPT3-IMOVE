@@ -56,8 +56,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
                 let desc = dictionary["desc"] as! String
                 let name = dictionary["name"] as! String
                 let rating = dictionary["rating"] as! Int
-                let location = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude:lat, longitude:long), image: image, desc:desc, name:name, rating:String(rating))
-                print(location)
+                let type = dictionary["type"] as! String
+                let location = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude:lat, longitude:long), image: image, desc:desc, name:name, rating:String(rating), type: Type(rawValue: type)!)
+                print(location.type)
                 self.pointers.append(location)
                 self.Map.addAnnotation(location)
             }

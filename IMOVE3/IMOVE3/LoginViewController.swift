@@ -42,6 +42,9 @@ class LoginViewController: UIViewController {
                 
                 print("You have successfully logged in")
                 
+                let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "mainTabBarController") as! UITabBarController
+                self.present(VC1, animated:true, completion: nil)
+                
             } else {
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                 
