@@ -270,6 +270,7 @@
                         <outlet property="UICountButton" destination="buz-vL-iLR" id="Xzp-mG-iqO"/>
                         <outlet property="descLabel" destination="aAR-CA-zTx" id="78B-nm-J9u"/>
                         <outlet property="nameLabel" destination="eRc-5K-7Tc" id="vgO-Gv-Qyd"/>
+                        <outlet property="timerLabel" destination="wM8-2C-WiB" id="ngp-OQ-zlT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9LI-g2-bdH" userLabel="First Responder" sceneMemberID="firstResponder"/>

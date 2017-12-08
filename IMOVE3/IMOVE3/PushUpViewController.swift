@@ -16,7 +16,11 @@ class PushUpViewController: UIViewController {
     @IBOutlet weak var descLabel: UITextView!
     @IBOutlet weak var ExerciseButton: UIButton!
     
+    @IBOutlet weak var timerLabel: UILabel!
     var challenge:ChallengeAnnotation!
+    var timer = Timer()
+    var seconds = 300
+    var isTimerRunning = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +30,20 @@ class PushUpViewController: UIViewController {
         UICountButton.clipsToBounds = true
         self.nameLabel.text = challenge.name!
         self.descLabel.text = challenge.desc!
+        startTimer()
         
         // Do any additional setup after loading the view.
     }
+    
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(PushUpViewController.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer(){
+        seconds -= 1
+        timerLabel.text = timeString(time: TimeInterval(seconds))
+    }
+    
     
     @IBAction func CountButton(_ sender: Any) {
         //Adds the count to the value of the button.
@@ -44,6 +59,14 @@ class PushUpViewController: UIViewController {
     }
     
 
+    func timeString(time:TimeInterval) -> String {
+        //let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        let milliseconds = (Int(time)%1) * 1000
+        return String(format:"%02i:%02i:%02i", minutes, seconds, milliseconds)
+    }
+    
     /*
     // MARK: - Navigation
 
