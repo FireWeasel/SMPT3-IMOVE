@@ -58,7 +58,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
                 let rating = dictionary["rating"] as! Int
                 let type = dictionary["type"] as! String
                 let location = ChallengeAnnotation(coordinate: CLLocationCoordinate2D(latitude:lat, longitude:long), image: image, desc:desc, name:name, rating:String(rating), type: Type(rawValue: type)!)
-                print(location.type)
+                //print(location.type)
                 self.pointers.append(location)
                 self.Map.addAnnotation(location)
             }
@@ -150,6 +150,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         let challengeAnnotation = view.annotation as! ChallengeAnnotation
         let views = Bundle.main.loadNibNamed("CustomAnnotationView", owner: nil, options: nil)
         let calloutView = views?[0] as! CustomAnnotationView
+        calloutView.challengeObjec = challengeAnnotation
         calloutView.challengeName.text = challengeAnnotation.name
         calloutView.challengeDescription.text = challengeAnnotation.desc
         calloutView.toughnessLabel.text = challengeAnnotation.rating
@@ -165,7 +166,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
                 DispatchQueue.main.async {
                     image = UIImage(data:data!)
                     calloutView.challengeImage.image = image
-                    print(data)
+                    //print(data)
                 }
             }).resume()
         }

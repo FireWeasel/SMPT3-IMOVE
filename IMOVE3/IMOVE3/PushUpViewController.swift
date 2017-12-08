@@ -12,7 +12,11 @@ class PushUpViewController: UIViewController {
 
     @IBOutlet weak var UICountButton: UIButton!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descLabel: UITextView!
     @IBOutlet weak var ExerciseButton: UIButton!
+    
+    var challenge:ChallengeAnnotation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,9 @@ class PushUpViewController: UIViewController {
         ExerciseButton.clipsToBounds = true
         UICountButton.layer.cornerRadius = 80
         UICountButton.clipsToBounds = true
+        self.nameLabel.text = challenge.name!
+        self.descLabel.text = challenge.desc!
+        
         // Do any additional setup after loading the view.
     }
     

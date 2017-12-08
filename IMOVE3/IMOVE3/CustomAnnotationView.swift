@@ -17,17 +17,21 @@ class CustomAnnotationView: UIView {
     
     
     
+    var challengeObjec:ChallengeAnnotation!
     
     
     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
     
     @IBAction func ClickStart(_ sender: Any) {
-        
-        
-        if(challengeName.text == "Push-up challenge")
-        {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "pushup")
+        print(self.challengeObjec.type)
+        if(challengeObjec.type!.rawValue == "button"){
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "pushup") as! PushUpViewController
+            nextViewController.challenge = self.challengeObjec
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
+        }
+        /*if(challengeName.text == "Push-up challenge")
+        {
+            
         }
         else if(challengeName.text == "Sit-up challenge")
         {
@@ -43,7 +47,7 @@ class CustomAnnotationView: UIView {
         {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "group")
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
-        }
+        }*/
 
     }
     /*
