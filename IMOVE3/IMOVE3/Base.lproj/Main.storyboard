@@ -791,10 +791,10 @@
             </objects>
             <point key="canvasLocation" x="-1498" y="-707"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="rdF-6k-5Ru">
             <objects>
-                <viewController storyboardIdentifier="Challenge" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wRO-xg-uph" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Challenge" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wRO-xg-uph" customClass="LoginViewController" customModule="IMOVE3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rVg-mq-qeF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -876,6 +876,10 @@
                                 <state key="normal" title="Sign in">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="logIn:" destination="wRO-xg-uph" eventType="touchUpInside" id="zuH-Do-pJc"/>
+                                    <segue destination="jqc-Xh-Bwc" kind="show" id="AMp-sY-uJs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1y-nv-dmR">
                                 <rect key="frame" x="130" y="520" width="123" height="13"/>
@@ -935,6 +939,10 @@
                         <viewLayoutGuide key="safeArea" id="sQt-Fl-oma"/>
                     </view>
                     <navigationItem key="navigationItem" id="qiP-EQ-Z3P"/>
+                    <connections>
+                        <outlet property="nameTb" destination="Z9S-4t-nGn" id="ags-BL-YSN"/>
+                        <outlet property="passTb" destination="4x4-3C-WQn" id="qX3-ke-G5w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LhB-Zs-rVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1059,6 +1067,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Register:" destination="a2i-ka-yBE" eventType="touchUpInside" id="DcY-6g-KG3"/>
+                                    <segue destination="jqc-Xh-Bwc" kind="show" id="wnG-R3-ITo"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uqi-FT-nuS">
@@ -1240,6 +1249,6 @@
         <image name="ilS1ri2v" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kzJ-e5-b9c"/>
+        <segue reference="AMp-sY-uJs"/>
     </inferredMetricsTieBreakers>
 </document>
