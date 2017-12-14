@@ -10,6 +10,8 @@
 		4001FD6C246532C4A82430D4 /* Pods_IMOVE3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6257E03156B20F84AF7EBC6 /* Pods_IMOVE3UITests.framework */; };
 		91C57F4B3BE9F0F533A41CB2 /* Pods_IMOVE3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65C94B0547BE03DB4C87FFC /* Pods_IMOVE3.framework */; };
 		9E29497EAD998478F0A9F992 /* Pods_IMOVE3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37789002B9CF7D2704CBFACE /* Pods_IMOVE3Tests.framework */; };
+		F505B09E1FE276580085455D /* SitUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505B09D1FE276580085455D /* SitUpViewController.swift */; };
+		F505B0A01FE27B260085455D /* CycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505B09F1FE27B260085455D /* CycleViewController.swift */; };
 		F511CE721FC6BA6C004A5A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511CE711FC6BA6C004A5A53 /* AppDelegate.swift */; };
 		F511CE741FC6BA6C004A5A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511CE731FC6BA6C004A5A53 /* ViewController.swift */; };
 		F511CE771FC6BA6C004A5A53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F511CE751FC6BA6C004A5A53 /* Main.storyboard */; };
@@ -60,6 +62,8 @@
 		B6257E03156B20F84AF7EBC6 /* Pods_IMOVE3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMOVE3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65C94B0547BE03DB4C87FFC /* Pods_IMOVE3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMOVE3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C80F3D9A3B3E6F7F1C21F281 /* Pods-IMOVE3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMOVE3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMOVE3Tests/Pods-IMOVE3Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F505B09D1FE276580085455D /* SitUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitUpViewController.swift; sourceTree = "<group>"; };
+		F505B09F1FE27B260085455D /* CycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleViewController.swift; sourceTree = "<group>"; };
 		F511CE6E1FC6BA6C004A5A53 /* IMOVE3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMOVE3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F511CE711FC6BA6C004A5A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F511CE731FC6BA6C004A5A53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				F5D7997E1FD17D47004FDF3A /* chal-2.jpg */,
 				F5D7997F1FD17D47004FDF3A /* chal-3.jpg */,
 				F5C4BDC41FDA96B600BC64BE /* PushUpViewController.swift */,
+				F505B09D1FE276580085455D /* SitUpViewController.swift */,
+				F505B09F1FE27B260085455D /* CycleViewController.swift */,
 			);
 			path = IMOVE3;
 			sourceTree = "<group>";
@@ -525,7 +531,9 @@
 				F568A3341FD2BF1F0043215C /* User.swift in Sources */,
 				F511CE721FC6BA6C004A5A53 /* AppDelegate.swift in Sources */,
 				F51EB79B1FD94893004FBD74 /* LoginViewController.swift in Sources */,
+				F505B0A01FE27B260085455D /* CycleViewController.swift in Sources */,
 				F568A2F81FD151A90043215C /* ChallengeAnnotation.swift in Sources */,
+				F505B09E1FE276580085455D /* SitUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
