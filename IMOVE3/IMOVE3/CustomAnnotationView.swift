@@ -29,6 +29,24 @@ class CustomAnnotationView: UIView {
             nextViewController.challenge = self.challengeObjec
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
+        else if(challengeObjec.type!.rawValue == "map")
+        {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "cycle") as! CycleViewController
+            nextViewController.challenge = self.challengeObjec
+            UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
+        }
+        else if(challengeObjec.type!.rawValue == "group")
+        {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "group") as! GroupViewController
+            nextViewController.challenge = self.challengeObjec
+            UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
+        }
+        else if(challengeObjec.type!.rawValue == "climb")
+        {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "climbing") as! ClimbViewController
+            nextViewController.challenge = self.challengeObjec
+            UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
+        }
         /*if(challengeName.text == "Push-up challenge")
         {
             
@@ -38,16 +56,8 @@ class CustomAnnotationView: UIView {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "situp")
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
-        else if(challengeName.text == "Cycling challenge")
-        {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "cycle")
-            UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
-        }
-        else if(challengeName.text == "Group challenge")
-        {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "group")
-            UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
-        }*/
+        
+        */
 
     }
     /*

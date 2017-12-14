@@ -32,4 +32,5 @@ public enum Type:String {
     case button
     case other
     case map
+    case climb
 }
