@@ -758,19 +758,67 @@
         <!--Friends-->
         <scene sceneID="VDg-zb-yqe">
             <objects>
-                <viewController id="Apk-aj-sDd" sceneMemberID="viewController">
+                <viewController id="Apk-aj-sDd" customClass="FriendViewController" customModule="IMOVE3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Icg-un-3Kx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search friends" showsSearchResultsButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r0t-Sw-zbF">
+                                <rect key="frame" x="0.0" y="82" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="V0W-X6-m1I"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="Apk-aj-sDd" id="usE-go-LEB"/>
+                                </connections>
+                            </searchBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Friends" translatesAutoresizingMaskIntoConstraints="NO" id="Q4N-Nv-lgm">
+                                <rect key="frame" x="66" y="0.0" width="242" height="82"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMu-tt-HMJ">
+                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <segue destination="jqc-Xh-Bwc" kind="show" id="Xyy-rO-X2Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="r0t-Sw-zbF" secondAttribute="trailing" id="11e-FW-Cg1"/>
+                            <constraint firstItem="r0t-Sw-zbF" firstAttribute="leading" secondItem="Icg-un-3Kx" secondAttribute="leading" id="7GL-aC-AZ2"/>
+                            <constraint firstItem="r0t-Sw-zbF" firstAttribute="top" secondItem="Q4N-Nv-lgm" secondAttribute="bottom" id="KqF-Ct-aYW"/>
+                            <constraint firstItem="vDh-DI-cC7" firstAttribute="bottom" secondItem="r0t-Sw-zbF" secondAttribute="bottom" constant="480" id="Phh-2i-Ye1"/>
+                            <constraint firstItem="Q4N-Nv-lgm" firstAttribute="leading" secondItem="vDh-DI-cC7" secondAttribute="leading" constant="66" id="VYR-an-zLe"/>
+                            <constraint firstItem="Q4N-Nv-lgm" firstAttribute="centerX" secondItem="r0t-Sw-zbF" secondAttribute="centerX" id="XLb-LF-E8x"/>
+                            <constraint firstItem="Q4N-Nv-lgm" firstAttribute="top" secondItem="Icg-un-3Kx" secondAttribute="top" id="wGq-UB-Zea"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vDh-DI-cC7"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Friends" image="Untitled-5" id="KgJ-aw-dz4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="vm6-vY-17d" id="ISg-D5-X5Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8JL-Wj-LN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="vm6-vY-17d">
+                    <connections>
+                        <outlet property="delegate" destination="Apk-aj-sDd" id="ZcS-uk-KBI"/>
+                        <outlet property="searchBar" destination="r0t-Sw-zbF" id="uzX-X4-SUh"/>
+                        <outlet property="searchContentsController" destination="Apk-aj-sDd" id="yGr-uP-m7u"/>
+                        <outlet property="searchResultsDataSource" destination="Apk-aj-sDd" id="f4M-8V-CPE"/>
+                        <outlet property="searchResultsDelegate" destination="Apk-aj-sDd" id="W8t-AR-rZv"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-1498" y="1097"/>
+            <point key="canvasLocation" x="-1498.4000000000001" y="1096.1019490254873"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="yJs-yj-0Dl">
@@ -1435,6 +1483,7 @@
         <image name="Boxer" width="891" height="486"/>
         <image name="Cycler" width="500" height="375"/>
         <image name="Distance" width="160" height="160"/>
+        <image name="Friends" width="523" height="135"/>
         <image name="IMOVE-logo" width="5130" height="1224"/>
         <image name="LockIcon" width="512" height="512"/>
         <image name="Playground" width="5076" height="2855"/>
@@ -1449,6 +1498,6 @@
         <image name="ilS1ri2v" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WEg-0l-nhW"/>
+        <segue reference="Xyy-rO-X2Q"/>
     </inferredMetricsTieBreakers>
 </document>
