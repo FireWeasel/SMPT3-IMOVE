@@ -20,6 +20,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
     var myLocation = CLLocationCoordinate2D()
     var ref:DatabaseReference!
     var refHandle:UInt!
+    var leaderboards = [LeaderBoard]()
     @IBOutlet weak var ProfileLevelLabel: UILabel!
     
     var coordinates: [[Double]]!
@@ -159,9 +160,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
                 let name = dictionary["name"] as! String
                 let points = dictionary["points"] as! Int
                 var leaderboard = LeaderBoard(name: name, score: points)
-                var leaderboards = [LeaderBoard]()
-                leaderboards.append(leaderboard)
-                calloutView.leaderboard = leaderboards
+                print(leaderboard)
+                
+                self.leaderboards.append(leaderboard)
+                print(self.leaderboards)
+                calloutView.leaderboard = self.leaderboards
             }
         })
         // downloading image from storage

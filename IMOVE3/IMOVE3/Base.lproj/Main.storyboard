@@ -325,7 +325,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="jqc-Xh-Bwc" kind="show" id="KO5-tC-A0o"/>
+                                            <action selector="completeChallengeButton:" destination="Nlt-Pm-x9v" eventType="touchUpInside" id="ONx-DL-s3s"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2048,6 +2048,6 @@
         <image name="ilS1ri2v" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KO5-tC-A0o"/>
+        <segue reference="Kx9-Qr-28m"/>
     </inferredMetricsTieBreakers>
 </document>

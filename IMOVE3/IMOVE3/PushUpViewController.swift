@@ -55,6 +55,8 @@ class PushUpViewController: UIViewController {
             self.view.addSubview(popUp.view)
             popUp.didMove(toParentViewController: self)
             timer.invalidate()
+            
+            
         } else {
         seconds -= 1
         timerLabel.text = timeString(time: TimeInterval(seconds))
