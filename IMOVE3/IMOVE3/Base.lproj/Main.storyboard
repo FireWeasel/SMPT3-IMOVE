@@ -923,6 +923,15 @@
                                     <action selector="Stop:" destination="Dvy-QR-tzM" eventType="touchUpInside" id="5tY-8l-xW5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xz-n1-XHk">
+                                <rect key="frame" x="0.0" y="0.0" width="49" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <segue destination="jqc-Xh-Bwc" kind="show" id="FOI-zE-yHN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="c7c-PM-ptY"/>
@@ -936,7 +945,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Bm-u1-zhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4676" y="1397"/>
+            <point key="canvasLocation" x="-4676" y="1372"/>
         </scene>
         <!--Tricep View Controller-->
         <scene sceneID="rb1-cd-goF">
@@ -1010,6 +1019,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WF-HP-lzg">
+                                <rect key="frame" x="0.0" y="0.0" width="49" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <segue destination="jqc-Xh-Bwc" kind="show" id="fZ4-ST-bSi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="JPR-fb-FdD"/>
@@ -1027,7 +1045,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xde-kY-8nZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4676" y="2140"/>
+            <point key="canvasLocation" x="-4676" y="2060"/>
         </scene>
         <!--Climb View Controller-->
         <scene sceneID="gpe-Rk-fto">
@@ -1909,6 +1927,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="aPH-hd-BjR" firstAttribute="top" secondItem="sVE-a7-uWV" secondAttribute="bottom" constant="29" id="1cS-Go-IOZ"/>
                             <constraint firstItem="sQt-Fl-oma" firstAttribute="bottom" secondItem="V1y-nv-dmR" secondAttribute="bottom" constant="134" id="2pc-t9-5Yv"/>
@@ -1954,6 +1973,9 @@
                             <constraint firstItem="Z9S-4t-nGn" firstAttribute="trailing" secondItem="4x4-3C-WQn" secondAttribute="trailing" id="w2C-Af-IpP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sQt-Fl-oma"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="b18-84-G84" appends="YES" id="KXN-NJ-geM"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="qiP-EQ-Z3P"/>
                     <connections>
@@ -1962,6 +1984,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LhB-Zs-rVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="b18-84-G84">
+                    <connections>
+                        <action selector="Hide:" destination="wRO-xg-uph" id="o2J-Nm-CZL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1927.2" y="-2096.4017991004498"/>
         </scene>
@@ -2222,6 +2249,6 @@
         <image name="ilS1ri2v" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4rT-1m-4fJ"/>
+        <segue reference="fZ4-ST-bSi"/>
     </inferredMetricsTieBreakers>
 </document>

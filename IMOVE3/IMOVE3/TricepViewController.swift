@@ -61,6 +61,12 @@ class TricepViewController: UIViewController {
     }
     
     
+    @IBAction func HideKeyBoard(_ sender: Any) {
+        
+    }
+    
+    
+    
     func startTimer(){
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(TricepViewController.updateTimer)), userInfo: nil, repeats: true)
     }
