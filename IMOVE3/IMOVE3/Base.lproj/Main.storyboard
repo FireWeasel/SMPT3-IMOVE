@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wRO-xg-uph">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wRO-xg-uph">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -1413,17 +1413,17 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sVE-a7-uWV">
                                 <rect key="frame" x="43" y="343" width="296" height="42"/>
-                                <color key="backgroundColor" red="0.77316765803747223" green="0.77316765803747223" blue="0.77316765803747223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m56-aV-o0d">
                                 <rect key="frame" x="43" y="408" width="296" height="42"/>
-                                <color key="backgroundColor" red="0.77316765799999998" green="0.77316765799999998" blue="0.77316765799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqM-4z-iuE">
-                                <rect key="frame" x="0.0" y="256" width="188" height="40"/>
-                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="236" width="188" height="60"/>
+                                <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="kgB-7V-JSY"/>
+                                    <constraint firstAttribute="height" constant="60" id="kgB-7V-JSY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="Sign in">
@@ -1431,8 +1431,8 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paf-ae-xcA">
-                                <rect key="frame" x="188" y="256" width="187" height="40"/>
-                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="188" y="236" width="187" height="60"/>
+                                <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="187" id="vOO-G6-4sh"/>
                                 </constraints>
@@ -1445,7 +1445,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Playground" translatesAutoresizingMaskIntoConstraints="NO" id="zHz-vT-iud">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="236"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMOVE-logo" translatesAutoresizingMaskIntoConstraints="NO" id="x41-fy-WBu">
                                 <rect key="frame" x="43" y="42" width="289" height="102"/>
@@ -1455,14 +1455,14 @@
                             </imageView>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z9S-4t-nGn">
                                 <rect key="frame" x="84" y="349" width="248" height="30"/>
-                                <color key="backgroundColor" red="0.77316765799999998" green="0.77316765799999998" blue="0.77316765799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4x4-3C-WQn">
                                 <rect key="frame" x="84" y="414" width="248" height="30"/>
-                                <color key="backgroundColor" red="0.77316765799999998" green="0.77316765799999998" blue="0.77316765799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1565,8 +1565,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jK9-Vs-WVl">
-                                <rect key="frame" x="39" y="328" width="296" height="42"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jK9-Vs-WVl">
+                                <rect key="frame" x="39" y="318" width="296" height="42"/>
                                 <color key="backgroundColor" red="0.77316765799999998" green="0.77316765799999998" blue="0.77316765799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qRJ-aB-7RY">
@@ -1586,7 +1586,7 @@
                                 <color key="backgroundColor" red="0.77316765799999998" green="0.77316765799999998" blue="0.77316765799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F0G-hn-bJT">
                                 <rect key="frame" x="75" y="434" width="253" height="30"/>
@@ -1614,11 +1614,10 @@
                                 </state>
                                 <connections>
                                     <action selector="Register:" destination="a2i-ka-yBE" eventType="touchUpInside" id="DcY-6g-KG3"/>
-                                    <segue destination="jqc-Xh-Bwc" kind="show" id="wnG-R3-ITo"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uqi-FT-nuS">
-                                <rect key="frame" x="75" y="334" width="253" height="30"/>
+                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uqi-FT-nuS">
+                                <rect key="frame" x="75" y="324" width="253" height="30"/>
                                 <color key="backgroundColor" red="0.77316765799999998" green="0.77316765799999998" blue="0.77316765799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1646,8 +1645,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3ui-ob-99Z">
-                                <rect key="frame" x="44" y="334" width="28" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="UserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3ui-ob-99Z">
+                                <rect key="frame" x="44" y="324" width="28" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="GdO-uN-XPS"/>
                                 </constraints>
@@ -1677,6 +1676,17 @@
                                     <constraint firstAttribute="height" constant="102" id="0Ss-EI-3P0"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ael-eJ-112">
+                                <rect key="frame" x="131" y="525" width="113" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58431372549019611" green="0.59607843137254901" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Upload image">
+                                    <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SetImage:" destination="a2i-ka-yBE" eventType="touchUpInside" id="jBC-hg-Ucu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1748,7 +1758,7 @@
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="Uqi-FT-nuS" id="V2m-sl-Hwr"/>
-                        <outlet property="passwordTextField" destination="LkS-Mj-RhT" id="pZI-cK-RXS"/>
+                        <outlet property="passwordTextField" destination="F0G-hn-bJT" id="ROe-X5-g59"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfQ-Th-pBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1758,7 +1768,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-188" y="-1630"/>
+            <point key="canvasLocation" x="-188" y="-1630.4347826086957"/>
         </scene>
         <!--Guide-->
         <scene sceneID="eHX-Bw-sEB">
@@ -1802,6 +1812,6 @@
         <image name="ilS1ri2v" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6XD-cX-leU"/>
+        <segue reference="pWn-d1-Z4L"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -18,7 +18,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var profileImage: UIImageView!
+    var profileImage:UIImage?
     
     var user: User?
     override func viewDidLoad() {
@@ -41,11 +41,11 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBAction func Register(_ sender: Any) {
         var name = nameTextField.text
         var password = passwordTextField.text
-        var img = profileImage.image
+        var img = profileImage
         var level = 1;
         var totalScore = 0;
         var logedIn = false;
-        
+        print(self.profileImage)
         
         if nameTextField.text == "" || passwordTextField.text == ""{
             let alert = UIAlertController(title: "Error", message: "Please enter a name and password", preferredStyle: .alert)
@@ -66,7 +66,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                     let uid = (Auth.auth().currentUser?.uid)!
                     
                     let refImage = Storage.storage().reference().child("Users").child("\(name!).jpg")
-                    if let uploadData = UIImagePNGRepresentation(img!)
+                    if let uploadData = UIImagePNGRepresentation(self.profileImage!)
                     {
                         refImage.putData( uploadData , metadata: nil, completion: { (metadata, error) in
                             if error != nil
@@ -86,6 +86,25 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                         })
                     }
                     
+                    Auth.auth().signIn(withEmail: nameEmail, password: password!) { (user, error) in
+                        
+                        if error == nil {
+                            
+                            print("You have successfully logged in")
+                            
+                            let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "mainTabBarController") as! UITabBarController
+                            self.present(VC1, animated:true, completion: nil)
+                            
+                        } else {
+                            let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                            
+                            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                            alertController.addAction(defaultAction)
+                            
+                            self.present(alertController, animated: true, completion: nil)
+                        }
+                    }
+                    
                     
                 } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -100,12 +119,13 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         nameTextField.text = ""
         passwordTextField.text = ""
-        profileImage.image = #imageLiteral(resourceName: "defaultPhoto")
+        profileImage = #imageLiteral(resourceName: "defaultPhoto")
     }
     
     
-    @IBAction func SetImage(_ sender: UITapGestureRecognizer)
-    {
+    
+    
+    @IBAction func SetImage(_ sender: UIButton) {
         let imagePickerController = UIImagePickerController()
         
         // Only allow photos to be picked, not taken.
@@ -114,7 +134,12 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         // Make sure ViewController is notified when the user picks an image.
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
+        
     }
+    
+    
+    
+   
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController)
     {
@@ -123,11 +148,17 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
-        guard let selectedPhoto = info[UIImagePickerControllerOriginalImage] as? UIImage
-            else{
-                fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        var selectedImage:UIImage?
+        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage{
+            selectedImage = editedImage
+        } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage{
+            selectedImage = originalImage
         }
-        profileImage.image = selectedPhoto
+        
+        if let selectedImageFromPicker = selectedImage{
+            self.profileImage = selectedImageFromPicker
+            print(self.profileImage)
+        }
         dismiss(animated: true, completion: nil)
     }
     
