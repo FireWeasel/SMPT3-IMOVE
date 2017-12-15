@@ -13,7 +13,7 @@
 		F505B09E1FE276580085455D /* SitUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505B09D1FE276580085455D /* SitUpViewController.swift */; };
 		F505B0A01FE27B260085455D /* CycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505B09F1FE27B260085455D /* CycleViewController.swift */; };
 		F505B0A21FE284D20085455D /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505B0A11FE284D20085455D /* FriendViewController.swift */; };
-		F5077B011FE3C87000A54887 /* CompletedChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5077B001FE3C86F00A54887 /* CompletedChallengeViewController.swift */; };
+		F505B0A41FE3CD480085455D /* CompletedChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505B0A31FE3CD480085455D /* CompletedChallengeViewController.swift */; };
 		F5077B031FE3C8CF00A54887 /* LeaderBoards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5077B021FE3C8CE00A54887 /* LeaderBoards.swift */; };
 		F511CE721FC6BA6C004A5A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511CE711FC6BA6C004A5A53 /* AppDelegate.swift */; };
 		F511CE741FC6BA6C004A5A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511CE731FC6BA6C004A5A53 /* ViewController.swift */; };
@@ -71,7 +71,7 @@
 		F505B09D1FE276580085455D /* SitUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitUpViewController.swift; sourceTree = "<group>"; };
 		F505B09F1FE27B260085455D /* CycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleViewController.swift; sourceTree = "<group>"; };
 		F505B0A11FE284D20085455D /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
-		F5077B001FE3C86F00A54887 /* CompletedChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompletedChallengeViewController.swift; path = "/Users/fhict/Desktop/SMart Mobile/Repository/SMPT3-IMOVE/IMOVE3/IMOVE3/CompletedChallengeViewController.swift"; sourceTree = "<absolute>"; };
+		F505B0A31FE3CD480085455D /* CompletedChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedChallengeViewController.swift; sourceTree = "<group>"; };
 		F5077B021FE3C8CE00A54887 /* LeaderBoards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoards.swift; sourceTree = "<group>"; };
 		F511CE6E1FC6BA6C004A5A53 /* IMOVE3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMOVE3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F511CE711FC6BA6C004A5A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 				F511CE751FC6BA6C004A5A53 /* Main.storyboard */,
 				F568A3371FD96FC30043215C /* TabBarViewController.swift */,
 				F51EB79A1FD94893004FBD74 /* LoginViewController.swift */,
-				F5077B001FE3C86F00A54887 /* CompletedChallengeViewController.swift */,
+				F505B0A31FE3CD480085455D /* CompletedChallengeViewController.swift */,
 				F568A3351FD932A50043215C /* RegisterViewController.swift */,
 				F568A3311FD2BEBF0043215C /* ProfileViewController.swift */,
 				F568A3331FD2BF1F0043215C /* User.swift */,
@@ -539,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F569FA3A1FE2E83E00B96059 /* GroupViewController.swift in Sources */,
+				F505B0A41FE3CD480085455D /* CompletedChallengeViewController.swift in Sources */,
 				F568A3361FD932A50043215C /* RegisterViewController.swift in Sources */,
 				F511CE741FC6BA6C004A5A53 /* ViewController.swift in Sources */,
 				F568A3381FD96FC30043215C /* TabBarViewController.swift in Sources */,
@@ -546,7 +547,6 @@
 				F5077B031FE3C8CF00A54887 /* LeaderBoards.swift in Sources */,
 				F568A2FA1FD155C10043215C /* AnnotationView.swift in Sources */,
 				F511CEA01FC6BC65004A5A53 /* MapViewController.swift in Sources */,
-				F5077B011FE3C87000A54887 /* CompletedChallengeViewController.swift in Sources */,
 				F5C4BDC51FDA96B600BC64BE /* PushUpViewController.swift in Sources */,
 				F568A2F01FD1486B0043215C /* CustomAnnotationView.swift in Sources */,
 				F568A3321FD2BEBF0043215C /* ProfileViewController.swift in Sources */,
