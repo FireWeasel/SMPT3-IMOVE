@@ -154,6 +154,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         calloutView.challengeName.text = challengeAnnotation.name
         calloutView.challengeDescription.text = challengeAnnotation.desc
         calloutView.toughnessLabel.text = challengeAnnotation.rating
+        refHandle = ref.child("Leaderboards").child(challengeAnnotation.name).observe(.childAdded, with: {(snapshot) in
+            if let dictionary = snapshot.value as? [String:AnyObject] {
+                let name = dictionary["name"] as! String
+                let points = dictionary["points"] as! Int
+                var leaderboard = LeaderBoard(name: name, score: points)
+                var leaderboards = [LeaderBoard]()
+                leaderboards.append(leaderboard)
+                calloutView.leaderboard = leaderboards
+            }
+        })
         // downloading image from storage
         var image:UIImage!
         if let imageURL = challengeAnnotation.image {

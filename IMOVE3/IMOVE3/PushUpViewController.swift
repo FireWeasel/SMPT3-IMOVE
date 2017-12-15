@@ -18,9 +18,11 @@ class PushUpViewController: UIViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
     var challenge:ChallengeAnnotation!
+    var leaderboard = [LeaderBoard]()
     var timer = Timer()
-    var seconds = 300
+    var seconds = 10
     var isTimerRunning = false
+    var counter:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,7 @@ class PushUpViewController: UIViewController {
         ExerciseButton.clipsToBounds = true
         UICountButton.layer.cornerRadius = 80
         UICountButton.clipsToBounds = true
+        print(challenge.name)
         self.nameLabel.text = challenge.name!
         self.descLabel.text = challenge.desc!
         startTimer()
@@ -40,8 +43,22 @@ class PushUpViewController: UIViewController {
     }
     
     @objc func updateTimer(){
+        if(seconds < 1)
+        {
+            let popUp = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "completedView") as! CompletedChallengeViewController
+            self.addChildViewController(popUp)
+            popUp.challenge = self.challenge
+            //popUp.nameLabel.text = self.challenge.name
+            popUp.count = self.counter
+            popUp.leaderboardList = self.leaderboard
+            popUp.view.frame = self.view.frame
+            self.view.addSubview(popUp.view)
+            popUp.didMove(toParentViewController: self)
+            timer.invalidate()
+        } else {
         seconds -= 1
         timerLabel.text = timeString(time: TimeInterval(seconds))
+        }
     }
     
     
@@ -51,6 +68,7 @@ class PushUpViewController: UIViewController {
         let intCount = Int(Count!)! + 1
         let newCount = String(intCount)
         UICountButton.setTitle(newCount, for: .normal)
+        self.counter = intCount
     }
     
     override func didReceiveMemoryWarning() {

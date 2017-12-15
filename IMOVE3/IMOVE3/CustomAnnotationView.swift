@@ -14,6 +14,7 @@ class CustomAnnotationView: UIView {
     @IBOutlet weak var challengeDescription: UILabel!
     @IBOutlet weak var navigateButton: UIButton!
     @IBOutlet weak var toughnessLabel: UILabel!
+    var leaderboard = [LeaderBoard]()
     
     
     
@@ -26,7 +27,9 @@ class CustomAnnotationView: UIView {
         print(self.challengeObjec.type)
         if(challengeObjec.type!.rawValue == "button"){
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "pushup") as! PushUpViewController
+            print(challengeObjec)
             nextViewController.challenge = self.challengeObjec
+            nextViewController.leaderboard = self.leaderboard
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
         else if(challengeObjec.type!.rawValue == "map")
