@@ -36,6 +36,8 @@
 		F569FA3A1FE2E83E00B96059 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569FA391FE2E83E00B96059 /* GroupViewController.swift */; };
 		F569FA3C1FE2EF3C00B96059 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569FA3B1FE2EF3C00B96059 /* RatingViewController.swift */; };
 		F569FA3E1FE2F4D200B96059 /* ClimbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569FA3D1FE2F4D200B96059 /* ClimbViewController.swift */; };
+		F569FA441FE3E31D00B96059 /* PlankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569FA431FE3E31D00B96059 /* PlankViewController.swift */; };
+		F569FA461FE3E92E00B96059 /* TricepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569FA451FE3E92E00B96059 /* TricepViewController.swift */; };
 		F5C4BDC51FDA96B600BC64BE /* PushUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4BDC41FDA96B600BC64BE /* PushUpViewController.swift */; };
 		F5D799801FD17D47004FDF3A /* chal-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5D7997D1FD17D46004FDF3A /* chal-1.jpg */; };
 		F5D799811FD17D47004FDF3A /* chal-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5D7997E1FD17D47004FDF3A /* chal-2.jpg */; };
@@ -100,6 +102,8 @@
 		F569FA391FE2E83E00B96059 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		F569FA3B1FE2EF3C00B96059 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		F569FA3D1FE2F4D200B96059 /* ClimbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbViewController.swift; sourceTree = "<group>"; };
+		F569FA431FE3E31D00B96059 /* PlankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlankViewController.swift; sourceTree = "<group>"; };
+		F569FA451FE3E92E00B96059 /* TricepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TricepViewController.swift; sourceTree = "<group>"; };
 		F5C4BDC41FDA96B600BC64BE /* PushUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpViewController.swift; sourceTree = "<group>"; };
 		F5D7997D1FD17D46004FDF3A /* chal-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chal-1.jpg"; sourceTree = "<group>"; };
 		F5D7997E1FD17D47004FDF3A /* chal-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chal-2.jpg"; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 				F5D7997D1FD17D46004FDF3A /* chal-1.jpg */,
 				F5D7997E1FD17D47004FDF3A /* chal-2.jpg */,
 				F5D7997F1FD17D47004FDF3A /* chal-3.jpg */,
+				F569FA451FE3E92E00B96059 /* TricepViewController.swift */,
+				F569FA431FE3E31D00B96059 /* PlankViewController.swift */,
 				F569FA3D1FE2F4D200B96059 /* ClimbViewController.swift */,
 				F569FA3B1FE2EF3C00B96059 /* RatingViewController.swift */,
 				F5C4BDC41FDA96B600BC64BE /* PushUpViewController.swift */,
@@ -554,6 +560,8 @@
 				F505B0A21FE284D20085455D /* FriendViewController.swift in Sources */,
 				F569FA3E1FE2F4D200B96059 /* ClimbViewController.swift in Sources */,
 				F511CE721FC6BA6C004A5A53 /* AppDelegate.swift in Sources */,
+				F569FA441FE3E31D00B96059 /* PlankViewController.swift in Sources */,
+				F569FA461FE3E92E00B96059 /* TricepViewController.swift in Sources */,
 				F51EB79B1FD94893004FBD74 /* LoginViewController.swift in Sources */,
 				F505B0A01FE27B260085455D /* CycleViewController.swift in Sources */,
 				F568A2F81FD151A90043215C /* ChallengeAnnotation.swift in Sources */,

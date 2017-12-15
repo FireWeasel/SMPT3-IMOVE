@@ -257,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Np-Wa-qhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5860" y="-1453.2233883058473"/>
+            <point key="canvasLocation" x="-5578" y="-1453"/>
         </scene>
         <!--Completed Challenge View Controller-->
         <scene sceneID="xbv-Kl-zQh">
@@ -413,8 +413,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvY-z7-fyB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvY-z7-fyB">
                                 <rect key="frame" x="135" y="189" width="105" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="zoB-Md-7Bn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="62"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -451,10 +454,12 @@
                             <constraint firstItem="iSt-7G-3lY" firstAttribute="trailing" secondItem="qyM-MB-iDm" secondAttribute="trailing" constant="317" id="CGu-BF-wHQ"/>
                             <constraint firstItem="yxC-IY-1LC" firstAttribute="leading" secondItem="3B4-pe-jj7" secondAttribute="leading" id="JiS-8j-E9S"/>
                             <constraint firstItem="v21-PZ-YQK" firstAttribute="leading" secondItem="cts-86-oJA" secondAttribute="leadingMargin" id="QRw-Qk-6V9"/>
+                            <constraint firstItem="jvY-z7-fyB" firstAttribute="leading" secondItem="iSt-7G-3lY" secondAttribute="leading" constant="135" id="VND-M6-9PQ"/>
                             <constraint firstItem="iSt-7G-3lY" firstAttribute="bottom" secondItem="4Zv-pa-wbi" secondAttribute="bottom" constant="306" id="X2f-75-qoS"/>
                             <constraint firstItem="qyM-MB-iDm" firstAttribute="leading" secondItem="3At-S1-6Ih" secondAttribute="leading" id="Z1O-Ow-yZx"/>
                             <constraint firstItem="v21-PZ-YQK" firstAttribute="centerX" secondItem="3At-S1-6Ih" secondAttribute="centerX" id="bbM-KS-IrJ"/>
                             <constraint firstItem="iSt-7G-3lY" firstAttribute="bottom" secondItem="v21-PZ-YQK" secondAttribute="bottom" constant="348" id="cBu-BR-M8d"/>
+                            <constraint firstItem="3B4-pe-jj7" firstAttribute="top" secondItem="jvY-z7-fyB" secondAttribute="bottom" constant="7" id="hS7-ir-dic"/>
                             <constraint firstItem="4Zv-pa-wbi" firstAttribute="trailing" secondItem="3B4-pe-jj7" secondAttribute="trailing" id="hwZ-gU-PD0"/>
                             <constraint firstItem="v21-PZ-YQK" firstAttribute="trailing" secondItem="cts-86-oJA" secondAttribute="trailingMargin" id="kCe-r5-gDp"/>
                             <constraint firstItem="4Zv-pa-wbi" firstAttribute="leading" secondItem="3B4-pe-jj7" secondAttribute="leading" id="qAa-EG-19N"/>
@@ -474,7 +479,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EX5-ax-qIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5093.6000000000004" y="-1453.2233883058473"/>
+            <point key="canvasLocation" x="-4676" y="-1453"/>
         </scene>
         <!--Push Up View Controller-->
         <scene sceneID="Wxd-f0-SzQ">
@@ -855,6 +860,175 @@
             </objects>
             <point key="canvasLocation" x="-4676" y="-26.53673163418291"/>
         </scene>
+        <!--Plank View Controller-->
+        <scene sceneID="Uhz-fo-93Z">
+            <objects>
+                <viewController storyboardIdentifier="plank" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dvy-QR-tzM" customClass="PlankViewController" customModule="IMOVE3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BBT-Eh-guy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="For this challenge you have to do as many sit ups as possible in the given amount of time." textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbZ-bh-C8M">
+                                <rect key="frame" x="61" y="66" width="253" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vje-Hw-vze">
+                                <rect key="frame" x="101" y="146" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Exercise guide">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plank Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXH-Ty-m4N">
+                                <rect key="frame" x="16" y="20" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXj-4L-srL">
+                                <rect key="frame" x="50" y="184" width="275" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdT-BP-WMm">
+                                <rect key="frame" x="82" y="401" width="210" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Start:" destination="Dvy-QR-tzM" eventType="touchUpInside" id="7gg-X8-smO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw0-q6-Xcp">
+                                <rect key="frame" x="82" y="452" width="210" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                <state key="normal" title="Stop Early">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Stop:" destination="Dvy-QR-tzM" eventType="touchUpInside" id="5tY-8l-xW5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="c7c-PM-ptY"/>
+                    </view>
+                    <connections>
+                        <outlet property="descLabel" destination="fbZ-bh-C8M" id="Mos-ex-XSa"/>
+                        <outlet property="exerciseButton" destination="vje-Hw-vze" id="0em-cY-D8Q"/>
+                        <outlet property="nameLabel" destination="WXH-Ty-m4N" id="YnI-zg-gfP"/>
+                        <outlet property="timerLabel" destination="AXj-4L-srL" id="a1I-Rl-WJ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Bm-u1-zhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4676" y="1397"/>
+        </scene>
+        <!--Tricep View Controller-->
+        <scene sceneID="rb1-cd-goF">
+            <objects>
+                <viewController storyboardIdentifier="tricep" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qK5-gq-SvE" customClass="TricepViewController" customModule="IMOVE3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMO-Fv-2It">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tricep Dip Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOI-XG-LGt">
+                                <rect key="frame" x="16" y="20" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="For this challenge you have to do as many sit ups as possible in the given amount of time." textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydu-vr-r4e">
+                                <rect key="frame" x="61" y="72" width="253" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLp-Mq-6I2">
+                                <rect key="frame" x="101" y="152" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Exercise guide">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:10:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFk-IP-gfl">
+                                <rect key="frame" x="50" y="190" width="275" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="130" translatesAutoresizingMaskIntoConstraints="NO" id="klh-T3-yOU">
+                                <rect key="frame" x="14" y="331" width="347" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="SliderValueChanged:" destination="qK5-gq-SvE" eventType="valueChanged" id="MEf-l2-nb9"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TO-rg-lXk">
+                                <rect key="frame" x="16" y="368" width="343" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                <state key="normal" title="Set Score">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SetScore:" destination="qK5-gq-SvE" eventType="touchUpInside" id="FNR-by-iQ2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GF-wh-55o">
+                                <rect key="frame" x="141" y="263" width="92" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill in the amount of tricep dips you did." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBn-3s-R53">
+                                <rect key="frame" x="16" y="419" width="343" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="JPR-fb-FdD"/>
+                    </view>
+                    <connections>
+                        <outlet property="descLabel" destination="ydu-vr-r4e" id="5BK-8D-0t5"/>
+                        <outlet property="exerciseButton" destination="GLp-Mq-6I2" id="rC5-Yy-bz6"/>
+                        <outlet property="nameLabel" destination="uOI-XG-LGt" id="u5H-5F-lus"/>
+                        <outlet property="scoreLabel" destination="2GF-wh-55o" id="aOM-BI-Drm"/>
+                        <outlet property="setScoreButton" destination="7TO-rg-lXk" id="qNE-Lf-XE0"/>
+                        <outlet property="slider" destination="klh-T3-yOU" id="kwy-uk-qlI"/>
+                        <outlet property="sliderDescLabel" destination="KBn-3s-R53" id="Jpy-HC-bJq"/>
+                        <outlet property="timerLabel" destination="UFk-IP-gfl" id="crf-iz-rJI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xde-kY-8nZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4676" y="2140"/>
+        </scene>
         <!--Climb View Controller-->
         <scene sceneID="gpe-Rk-fto">
             <objects>
@@ -1002,7 +1176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sw9-og-i26" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4823" y="771"/>
+            <point key="canvasLocation" x="-4676" y="688"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="VCx-Rc-fvw">
@@ -2048,6 +2222,6 @@
         <image name="ilS1ri2v" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kx9-Qr-28m"/>
+        <segue reference="4rT-1m-4fJ"/>
     </inferredMetricsTieBreakers>
 </document>

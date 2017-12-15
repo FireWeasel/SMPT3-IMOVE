@@ -50,26 +50,20 @@ class CustomAnnotationView: UIView {
             nextViewController.challenge = self.challengeObjec
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
-        /*if(challengeName.text == "Push-up challenge")
+        else if(challengeObjec.type!.rawValue == "plank")
         {
-            
-        }
-        else if(challengeName.text == "Sit-up challenge")
-        {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "situp")
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "plank") as! PlankViewController
+            nextViewController.challenge = self.challengeObjec
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
-        
-        */
-
+        else if(challengeObjec.type!.rawValue == "tricep")
+        {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "tricep") as! TricepViewController
+            nextViewController.challenge = self.challengeObjec
+            UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
+        }
     }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+   
 
 }
 

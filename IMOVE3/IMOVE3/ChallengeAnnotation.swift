@@ -33,4 +33,6 @@ public enum Type:String {
     case other
     case map
     case climb
+    case plank
+    case tricep
 }
