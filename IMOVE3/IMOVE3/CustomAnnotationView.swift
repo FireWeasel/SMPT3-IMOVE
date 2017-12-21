@@ -36,30 +36,35 @@ class CustomAnnotationView: UIView {
         {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "cycle") as! CycleViewController
             nextViewController.challenge = self.challengeObjec
+            //nextViewController.leaderboard = self.leaderboard
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
         else if(challengeObjec.type!.rawValue == "group")
         {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "group") as! GroupViewController
             nextViewController.challenge = self.challengeObjec
+            //nextViewController.leaderboard = self.leaderboard
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
         else if(challengeObjec.type!.rawValue == "climb")
         {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "climbing") as! ClimbViewController
             nextViewController.challenge = self.challengeObjec
+            //nextViewController.leaderboard = self.leaderboard
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
         else if(challengeObjec.type!.rawValue == "plank")
         {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "plank") as! PlankViewController
             nextViewController.challenge = self.challengeObjec
+            nextViewController.leaderboard = self.leaderboard
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
         else if(challengeObjec.type!.rawValue == "tricep")
         {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "tricep") as! TricepViewController
             nextViewController.challenge = self.challengeObjec
+            //nextViewController.leaderboard = self.leaderboard
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
     }

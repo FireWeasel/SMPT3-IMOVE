@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UITableViewDataSource  {
     
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nrLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!

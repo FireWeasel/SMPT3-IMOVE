@@ -18,9 +18,11 @@ class PlankViewController: UIViewController {
     var challenge:ChallengeAnnotation!
     
     var timer = Timer()
-    var seconds = 120
+    var seconds = 10
     var isTimerRunning = false
     var pointsEarned = 200
+    var counter:Int?
+    var leaderboard = [LeaderBoard]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,11 +62,27 @@ class PlankViewController: UIViewController {
     
     @objc func updateTimer()
     {
-        seconds -= 1
-        timerLabel.text = timeString(time: TimeInterval(seconds))
+        if(seconds < 1)
+        {
+            let popUp = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "completedView") as! CompletedChallengeViewController
+            self.addChildViewController(popUp)
+            popUp.challenge = self.challenge
+            //popUp.nameLabel.text = self.challenge.name
+            popUp.count = (pointsEarned - seconds)
+            popUp.leaderboardList = self.leaderboard
+            popUp.view.frame = self.view.frame
+            self.view.addSubview(popUp.view)
+            popUp.didMove(toParentViewController: self)
+            timer.invalidate()
+        }
+        else {
+            seconds -= 1
+            timerLabel.text = timeString(time: TimeInterval(seconds))
+        }
+        
         
         //Finish challenge when done correctly, planked the whole 2 minuts
-        if(seconds == 0)
+       /* if(seconds == 0)
         {
             stopTimer()
             let alertController = UIAlertController(title: "Finished Planking", message: "You earned: " + String(pointsEarned) + " Points", preferredStyle: .alert)
@@ -73,7 +91,7 @@ class PlankViewController: UIViewController {
             alertController.addAction(defaultAction)
             
             self.present(alertController, animated: true, completion: nil)
-        }
+        }*/
     }
     
     func timeString(time:TimeInterval) -> String {
